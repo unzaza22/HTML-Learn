@@ -1,0 +1,65 @@
+HTML Quatations
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>ประโยคนี้อ้างอิงมาจากเว็บไซต์ของยูนิเซฟ:</p>
+<blockquote cite="https://www.unicef.org/thailand/tha/overview_7000.html">
+องค์การทุนเพื่อเด็กแห่งสหประชาชาติ หรือ ยูนิเซฟ ถือกำเนิดขึ้นหลังจากสงครามโลกครั้งที่ 2 
+โดยมีวัตถุประสงค์หลักเพื่อให้ความช่วยเหลือแก่เด็กๆ 
+ในทวีปยุโรปและเอเชียที่ต้องเผชิญกับภาวะอดอยากและโรคระบาดอันเป็นผลมาจากสงคราม 
+โดยยูนิเซฟได้ก่อตั้งขึ้นอย่างเป็นทางการในพ.ศ. 2489 
+และเพียง 2 ปีหลังจากนั้น ยูนิเซฟก็ได้เปิดสำนักงานขึ้นในประเทศไทยในพ.ศ. 2491
+</blockquote>
+
+</body>
+</html>
+
+HTML Element: <q> ข้อความอ้างอิงสั้นๆ
+เป้าหมายของยูนิเซฟคือ: <q>เพื่อพิทักษ์สิทธิเด็กทุกคนในประเทศไทย โดยไม่คำนึงถึงสัญชาติ เพศ ศาสนา เชื้อชาติ การศึกษาและฐานะ</q>
+
+HTML Element: <blockquote> กล่องข้อความอ้างอิง
+<blockquote cite="https://www.unicef.org/thailand/tha/overview_7000.html">
+องค์การทุนเพื่อเด็กแห่งสหประชาชาติ หรือ ยูนิเซฟ ถือกำเนิดขึ้นหลังจากสงครามโลกครั้งที่ 2 
+โดยมีวัตถุประสงค์หลักเพื่อให้ความช่วยเหลือแก่เด็กๆ 
+ในทวีปยุโรปและเอเชียที่ต้องเผชิญกับภาวะอดอยากและโรคระบาดอันเป็นผลมาจากสงคราม 
+โดยยูนิเซฟได้ก่อตั้งขึ้นอย่างเป็นทางการในพ.ศ. 2489 
+และเพียง 2 ปีหลังจากนั้น ยูนิเซฟก็ได้เปิดสำนักงานขึ้นในประเทศไทยในพ.ศ. 2491
+</blockquote>
+
+HTML Element: <abbr> ตัวย่อ
+<p><abbr title="United Nations International Children's Emergency Fund">UNICEF</abbr> 
+เป็นหน่วยงานของสหประชาชาติเพื่อให้ความช่วยเหลือด้านมนุษยธรรม, พัฒนาการ, 
+สุขภาพรวมถึงความเป็นอยู่ของเด็กและแม่ในประเทศกำลังพัฒนา</p>
+
+HTML Element: <address> สำหรับข้อมูลการติดต่อ
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>กำหนดข้อความส่วนของการติดต่อ</p>
+<address>
+ติดต่อคุณสมชาย<br> 
+ที่อยู่: 111/111 ถนนมีสุข ตำบลรุ่งเรือง จังหวัดกรุงเทพมหานคร 10000<br>
+www.example.com<br>
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="89ecf1e8e4f9e5ecc9e4e8e0e5a7eae6e4">[email&#160;protected]</a>
+</address>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
+
+HTML Element: <cite> ชื่องาน
+<img src="monalisa.jpg" width="220" height="277" alt="The Scream">
+<p><cite>Mona Lisa</cite> วาดโดยเลโอนาร์โด ดาวินชี ค.ศ. 1503 - 06</p>
+
+HTML Element: <bdo> ข้อความสลับข้าง
+<bdo dir="rtl">This text will be written from right to left</bdo>
+
+บทสรุป
+Tag	          อธิบาย
+<q>	          ข้อความอ้างอิงสั้น
+<blockquote>	กล่องข้อความอ้างอิง
+<abbr>	      ตัวย่อ
+<address>	    ข้อมูลการติดต่อ
+<cite>	      ชื่องาน
+<bdo>	        ข้อความสลับข้าง
