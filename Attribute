@@ -18,3 +18,39 @@ This is a paragraph.
 </body>
 </html>
 
+Attributes: href
+<!DOCTYPE html>
+<html>
+<body>
+
+<a href="http://www.code-th.com/">This is a link</a>
+
+</body>
+</html>
+
+Attributes: width, height
+<!DOCTYPE html>
+<html>
+<body>
+
+<img src="code_th.jpg" alt="code-th.com" width="50" height="50">
+
+</body>
+</html>
+
+ใช้ Single หรือ Double Quotes ?
+ปกติแล้ว Double Quotes จะเป็นที่นิยมใช้มากกว่า แต่ Single Quotes ก็สามารถใช้ได้เหมือนกัน
+
+ในบางกรณี ถ้าค่าใน Attibute มี Double Quotes รวมอยู่ด้วย เราก็จำเป็นต้องใช้ Single Quotes
+<p title="He says 'Hello' to Sam"></p>
+หรือ <p title='He says "Hello" to Sam'></p>
+
+Attribute  อธิบาย
+alt        แสดงข้อความในกรณีโหลดรูปไม่ขึ้น
+disabled   ยกเลิกการทำงาน Input Element
+href       ใส่ url ของลิงก์
+id         กำหนด ID ของ Element ซึ่งในหนึ่งเอกสาร HTML จะต้องไม่ซ้ำกัน
+src        ระบุที่อยู่ของไฟล์รูป
+style      ใส่โค้ด CSS ลงไปเพื่อตกแต่ง Element
+class      ระบุคลาสของ CSS
+title      ข้อมูลเพิ่มเติม จะแสดงในรูปแบบของ Tool-tip
