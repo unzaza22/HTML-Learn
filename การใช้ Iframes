@@ -1,0 +1,23 @@
+Iframe Syntax
+ใช้ Tag <iframe> เพื่อสร้างหน้าต่าง iframe
+Attribute src ใช้ระบุ URL ที่ต้องการแสดงในหน้าเว็บ
+
+ตั้งค่าความกว้างและความสูง
+ใช้ Attribute width และ height เพื่อระบุขนาดของ iframe
+สามารถใส่ค่าได้ 2 ประเภท คือ pixel (ตัวอย่าง 200px) และเปอร์เซนต์ (ตัวอย่าง 80%)
+กรณีไม่ใส่หน่วยค่าเริ่มต้นจะเป็น pixel
+<iframe src="http://www.code-th.com/" height="200" width="300"></iframe>
+
+ลบกรอบออก
+ค่าเริ่มต้นของ iframe จะมีกรอบมาด้วย
+ถ้าต้องการเอากรอบออก ให้ใส่ Attribute style แล้วใช้ CSS property border แล้วใส่ค่าเป็น none
+<iframe src="http://www.code-th.com/" style="border:none;"></iframe>
+หรือหากต้องการเปลี่ยนรูปแบบกรอบก็สามารถทำได้เหมือนกัน
+<iframe src="http://www.code-th.com/" style="border:2px solid grey;"></iframe>
+
+กดลิงก์แล้วเปิดใน iframe
+เราสามารถทำให้เวลากดลิงก์แล้วไปเปิดหน้าเว็บใน iframe
+ด้วยการใช้ Attribute target ของลิงก์ และ Attribute name ใน iframe
+<iframe src="htmlTest.html" name="iframe_a"></iframe>
+
+<p><a href="http://www.code-th.com" target="iframe_a">code-th.com</a></p>
