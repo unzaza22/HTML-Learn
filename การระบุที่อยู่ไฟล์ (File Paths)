@@ -1,0 +1,26 @@
+ที่อยู่	                            อธิบาย
+<img src="picture.jpg">	        picture.jpg อยู่ในโฟวเดอร์เดียวกันกับหน้าปัจจุบัน
+<img src="images/picture.jpg">	picture.jpg อยู่ในโฟวเดอร์ images ที่อยู่ในโฟวเดอร์ปัจจุบันเดียวกัน
+<img src="/images/picture.jpg">	picture.jpg อยู่ในโฟวเดอร์ images ที่อยู่ในหน้าเว็บปัจจุบัน
+<img src="../picture.jpg">	    picuture.jpg อยู่ที่โฟวเดอร์ชั้นก่อนหน้าโฟวเดอร์ปัจจุบัน
+
+ที่อยู่ไฟล์
+ที่อยู่ไฟล์เป็นตัวบอกว่าไฟล์นี้อยู่ที่โฟวเดอร์ไหนของโครงสร้างเว็บไซต์
+ที่อยู่ไฟล์จะใช้เมื่อเราต้องการเรียกไฟล์จากลิงค์ภายนอกไฟล์ เช่น
+หน้าเว็บ
+รูป
+ไฟล์ CSS
+ไฟล์ JavaScript
+
+Absolute Paths
+Absolute Path คือ URL เต็มของไฟล์บนอินเตอร์เน็ต
+<img src="http://www.code-th.com/html/example/code_th.jpg" alt="Logo">
+
+Relative Paths
+Relative Path คือที่อยู่ไฟล์ที่ชี้จากหน้าเว็บปัจจุบัน
+ตัวอย่างนี้คือที่อยู่ไฟล์ที่อยู่ในโฟวเดอร์ images ของที่อยู่หน้าเว็บปัจจุบัน
+<img src="/images/code_th.jpg" alt="Logo">
+ตัวอย่างนี้คือที่อยู่ไฟล์ที่อยู่ในโฟวเดอร์ images ของโฟวเดอร์ปัจจุบัน
+<img src="images/code_th.jpg" alt="Logo">
+ตัวอย่างนี้คือที่อยู่ไฟล์ที่อยู่โฟวเดอร์ images ซึ่งอยู่ที่โฟวเดอร์ชั้นก่อนหน้าโฟวเดอร์ปัจจุบัน
+<img src="../images/code_th.jpg" alt="Logo">
