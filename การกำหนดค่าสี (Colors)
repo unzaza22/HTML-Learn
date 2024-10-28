@@ -1,0 +1,19 @@
+การกำหนดค่าสีใน HTML
+
+ชื่อสี
+<h1 style="color: red;">This is header</h1>
+<p style="color: blue;">This is paragraph</p>
+
+ค่า RGB
+<p style="background-color: rgb(255,0,0);">This is paragraph 1</p>
+<p style="background-color: rgb(255,255,0);">This is paragraph 2</p>
+<p style="background-color: rgb(0,255,0);">This is paragraph 3</p>
+<p style="background-color: rgb(0,255,255);">This is paragraph 4</p>
+<p style="background-color: rgb(0,0,255);">This is paragraph 5</p>
+
+ค่า HEX
+<p style="background-color: #FF0000;">This is paragraph 1</p>
+<p style="background-color: #FFFF00;">This is paragraph 2</p>
+<p style="background-color: #00FF00;">This is paragraph 3</p>
+<p style="background-color: #00FFFF;">This is paragraph 4</p>
+<p style="background-color: #0000FF;">This is paragraph 5</p>
