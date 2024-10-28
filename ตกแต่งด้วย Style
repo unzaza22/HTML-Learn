@@ -1,0 +1,75 @@
+HTML Styles
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>I am normal</p>
+<p style="color:red;">I am red</p>
+<p style="color:blue;">I am blue</p>
+<p style="font-size:36px;">I am big</p>
+
+</body>
+</html>
+
+สีพื้นหลัง
+<!DOCTYPE html>
+<html>
+<body style="background-color: yellow;">
+
+<h1>This is header</h1>
+<p>This is paragraph</p>
+
+</body>
+</html>
+
+สีตัวอักษร
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 style="color: red;">This is header</h1>
+<p style="color: blue;">This is paragraph</p>
+
+</body>
+</html>
+
+ประเภทตัวอักษร
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 style="font-family:verdana;">This is header</h1>
+<p style="font-family:courier;">This is paragraph</p>
+
+</body>
+</html>
+
+ขนาดตัวอักษร
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 style="font-size:80px;">This is header</h1>
+<p style="font-size:200%;">This is paragraph</p>
+
+</body>
+</html>
+
+จัดตำแหน่งข้อความ
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 style="text-align:center;">This is header</h1>
+<p style="text-align:right;">This is paragraph</p>
+
+</body>
+</html>
+
+บทสรุป
+ใช้ Attribute style เพื่อตกแต่ง HTML Element
+ใช้ background-color เพื่อกำหนดสีพื้นหลัง
+ใช้ color เพื่อกำหนดสีข้อความ
+ใช้ font-family เพื่อกำหนดประเภทตัวอักษร
+ใช้ font-size เพื่อกำหนดขนาดตัวอักษร
+ใช้ text-align เพื่อจัดตำแหน่งข้อความ
