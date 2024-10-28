@@ -1,0 +1,40 @@
+<p>Example:</p>
+
+<code>
+var x = 1;<br>
+var y = 2;<br>
+document.getElementById("test").innerHTML = x + y;
+</code>
+
+รูปแบบโค้ดคอมพิวเตอร์ใน HTML
+ใน HTML การทำรูปแบบตัวอักษรปกติก็จะใช้ Attribute style แต่ไม่ใช่สำหรับโค้ดคอมพิวเตอร์
+เราจะใช้ Tag <kbd>, <samp> และ <code> ในการแสดงผลข้อความในรูปแบบของโค้ดคอมพิวเตอร์
+
+HTML Element: <kbd> ป้อนข้อมูลผ่านคีย์บอร์ด
+<p><kbd>File | Open...</kbd></p>
+
+HTML Element: <samp> สำหรับผลลัพธ์ที่ได้
+<samp>
+test.example.com login: Jan 16 23:23:01
+Linux 2.6.10-grsec+gg3+e+fhs6b+nfs+gr0501+++p3+c4a+gr2b-reslog-v6.189
+</samp>
+
+HTML Element: <code> สำหรับโค้ดคอมพิวเตอร์
+<code>
+<pre>
+var x = 1;
+var y = 2;
+document.getElementById("test").innerHTML = x + y;
+</pre>
+</code>
+
+HTML Element: <var> สำหรับตัวแปร
+Equation: <var>E</var> = <var>m</var><var>c</var><sup>2</sup>.
+
+บทสรุป
+Tag	    อธิบาย
+<kbd>	  ระบุการป้อนข้อมูลผ่านคีย์บอร์ด
+<samp>	ระบุผลลัพธ์ที่ได้
+<code>	โค้ดโปรแกรม
+<pre>	  คงรูปแบบข้อความเดิม
+<var>	  ระบุตัวแปร
