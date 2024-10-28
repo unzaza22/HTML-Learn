@@ -1,0 +1,266 @@
+ตัวอย่างตารางด้วย HTML
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>สินค้า</th>
+    <th>จังหวัด</th>
+    <th>ยอดขาย</th>
+  </tr>
+  <tr>
+    <td>ยาสีฟัน</td>
+    <td>กรุงเทพฯ</td>
+    <td>500,000</td>
+  </tr>
+  <tr>
+    <td>สบู่</td>
+    <td>นครราชสีมา</td>
+    <td>420,000</td>
+  </tr>
+  <tr>
+    <td>ผงซักฟอก</td>
+    <td>ชลบุรี</td>
+    <td>349,000</td>
+  </tr>
+  <tr>
+    <td>แปรงฟัน</td>
+    <td>เชียงใหม่</td>
+    <td>12,300</td>
+  </tr>
+  <tr>
+    <td>แชมพู</td>
+    <td>ขอนแก่น</td>
+    <td>345,990</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+สร้างตาราง
+สร้างตารางได้โดยใช้ Tag <table>
+แต่ละแถวของตารางใช้ Tag <tr>
+หัวคอลัมน์ใช้ Tag <th> ตัวอักษรจะเป็นตัวหนาและตัวอักษรจะจัดอยู่ตรงกลางอัตโนมัติ
+สร้างเซลล์ใส่ข้อมูลใช้ Tag <td> ซึ่งสามารถใส่ข้อมูลอะไรก็ได้ ไม่ว่าจะเป็นข้อความ รูป ลิสต์ หรือตารางซ้อนตาราง
+<table style="width:100%">
+  <tr>
+    <th>สินค้า</th>
+    <th>จังหวัด</th>
+    <th>ยอดขาย</th>
+  </tr>
+  <tr>
+    <td>ยาสีฟัน</td>
+    <td>กรุงเทพฯ</td>
+    <td>500,000</td>
+  </tr>
+  <tr>
+    <td>สบู่</td>
+    <td>นครราชสีมา</td>
+    <td>420,000</td>
+  </tr>
+</table>
+
+ใส่กรอบตาราง
+ถ้าเราไม่ตั้งค่ากรอบ เบราว์เซอร์จะไม่แสดงกรอบให้
+ซึ่งเราสามารถระบุค่ากรอบได้ โดยใช้ CSS property border
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+
+กรอบเส้นเดียว
+ถ้าเราไม่ตั้งค่าใดๆ กรอบจะมีค่า default เป็นกรอบ 2 ชั้น
+ถ้าเราต้องการระบุให้กรอบมีชั้นเดียว ให้ใช้ CSS property border-collapse แล้วกำหนดค่าเป็น collapse
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+</style>
+
+เพิ่มระยะห่างภายในเซลล์ (Paadding)
+<style>
+th, td {
+    padding: 15px;
+}
+</style>
+
+ข้อความหัวคอลัมน์ชิดซ้าย (Left Align)
+ค่าเริ่มต้นของหัวคอลัมน์ <th> จะเป็นตัวหนาและตัวอักษรอยู่ตรงกลาง
+ถ้าเราต้องการให้ข้อความอยู่ชิดซ้าย ให้ใช้ CSS property text-align
+<style>
+th {
+    text-align: left;
+}
+</style>
+
+เพิ่มระยะห่างระหว่างเซลล์
+เพิ่มระยะห่างระหว่างเซลล์ในตาราง ให้ใช้ CSS property border-spacing
+<style>
+table {
+    border-spacing: 15px;
+}
+</style>
+
+รวมเซลล์แนวนอน (Column Span)
+การรวมหลายๆ คอลัมน์เป็นเซลล์เดียว ให้ใช้ Attribute colspan แล้วใส่ค่าเป็นจำนวนคอลัมน์ถัดไปที่ต้องการรวม
+<table>
+  <tr>
+    <th>สินค้า</th>
+    <th colspan="2">จังหวัด - ยอดขาย</th>
+  </tr>
+  <tr>
+    <td>ยาสีฟัน</td>
+    <td>กรุงเทพฯ</td>
+    <td>500,000</td>
+  </tr>
+  <tr>
+    <td>สบู่</td>
+    <td>นครราชสีมา</td>
+    <td>420,000</td>
+  </tr>
+</table>
+
+รวมเซลล์แนวตั้ง (Row Span)
+การรวมหลายๆ แถวเป็นเซลล์เดียว ให้ใช้ Attribute rowspan แล้วใส่ค่าเป็นจำนวนแถวถัดไปที่ต้องการรวม
+<table>
+  <tr>
+    <th>สินค้า</th>
+    <th>จังหวัด</th>
+    <th>ยอดขาย</th>
+  </tr>
+  <tr>
+    <td rowspan="2">ยาสีฟันและสบู่</td>
+    <td>กรุงเทพฯ</td>
+    <td>500,000</td>
+  </tr>
+  <tr>
+    <td>นครราชสีมา</td>
+    <td>420,000</td>
+  </tr>
+</table>
+
+ใส่หัวเรื่อง (Caption)
+การใส่หัวเรื่องให้กับตาราง เราใช้ Tag <caption> และใส่ภายในและหลังจาก Element <table> ทันที
+<table>
+  <caption>ยอดขายปี 2560</caption>
+  <tr>
+    <th>สินค้า</th>
+    <th>จังหวัด</th>
+    <th>ยอดขาย</th>
+  </tr>
+  <tr>
+    <td>ยาสีฟัน</td>
+    <td>กรุงเทพฯ</td>
+    <td>500,000</td>
+  </tr>
+  <tr>
+    <td>สบู่</td>
+    <td>นครราชสีมา</td>
+    <td>420,000</td>
+  </tr>
+</table>
+
+ตกแต่งตารางเฉพาะ
+ถ้าเราต้องการกำหนดค่า CSS ให้กับแค่บางตารางเท่านั้น เราสามารถใช้ Attribute id หรือ Attribute class
+ถ้าเฉพาะเจาะจงตารางเดียว ให้ใช้ Attribute id
+ถ้ากำหนดแค่เป็นกลุ่มประเภทตาราง ให้ใช้ Attribute class
+ตัวอย่าง
+<style>
+.type1 {
+    width :100%;
+}
+.type1, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#t01 {
+    background-color: #f1f1c1;
+}
+</style>
+ตัวอย่าง
+<table class="type1" id="t01">
+  <tr>
+    <th>สินค้า</th>
+    <th>จังหวัด</th>
+    <th>ยอดขาย</th>
+  </tr>
+  <tr>
+    <td>ยาสีฟัน</td>
+    <td>กรุงเทพฯ</td>
+    <td>500,000</td>
+  </tr>
+  <tr>
+    <td>สบู่</td>
+    <td>นครราชสีมา</td>
+    <td>420,000</td>
+  </tr>
+</table>
+
+ใส่สีแถวสลับกัน
+<style>
+table#t01 {
+    width :100%;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+   background-color:#fff;
+}
+table#t01 th {
+    background-color: black;
+    color: white;
+}
+</style>
+
+บทสรุป
+ใช้ <table> สร้างตาราง
+ใช้ <tr> สร้างแถว
+ใช้ <td> สร้างเซลล์ใส่ข้อมูล
+ใช้ <th> สร้างหัวคอลัมน์
+ใช้ <caption> สร้างหัวเรื่อง
+ใช้ Property CSS border เพื่อกำหนดค่ากรอบ
+ใช้ Property CSS border-collapse กำหนดกรอบชั้นเดียว
+ใช้ Property CSS padding กำหนดระยะห่างภายในเซลล์ระหว่างกรอบและข้อมูล
+ใช้ Property CSS text-align จัดตำแหน่งข้อความในตาราง
+ใช้ Property CSS border-space กำหนดระยะห่างระหว่างเซลล์
+ใช้ Attribute colspan รวมคอลัมน์เข้าด้วยกัน
+ใช้ Attribute rowspan รวมแถวเข้าด้วยกัน
+ใช้ Attribute id กำหนด id ให้กับตาราง เพื่อใช้ร่วมกับ CSS
+ใช้ Attribute class กำหนดกลุ่มให้กับตาราง เพื่อใช้ร่วมกับ CSS
+
+Tag ที่ใช้กับตาราง
+Tag	        อธิบาย
+<table>	    สร้างตาราง
+<th>	      สร้างหัวคอลัมน์
+<tr>	      สร้างแถว
+<td>	      สร้างเซลล์ในข้อมูล
+<caption>	  สร้างหัวเรื่อง
+<colgroup>	ระบุกลุ่มคอลัมน์ เพื่อใช้ในการจัดรูปแบบ
+<col>	      ระบุคอลัมน์แต่ละคอลัมน์ เพื่อใช้ในการจัดรูปแบบ
+<thead>	    ระบุกลุ่มหัวคอลัมน์
+<tbody>	    ระบุกลุ่มเซลล์เนื้อหา
+<tfoot>	    ระบุกลุ่มเซลล์ปิดท้าย
