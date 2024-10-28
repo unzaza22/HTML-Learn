@@ -1,0 +1,127 @@
+Element: <head>
+Element <head> คือ Tag ที่ไว้บรรจุ Metadata (เกี่ยวกับข้อมูลของเว็บ) จะอยู่ระหว่าง Tag <html> และ <body>
+HTML Metadata คือข้อมูลเกี่ยวกับเว็บไซต์ที่ไม่แสดงผลในเบราว์เซอร์
+Metadata โดยปกติแล้วประกอบด้วย หัวเรื่อง (Title) ประเภทตัวอักษร (Character Set) โค้ด CSS และ JavaScript และข้อมูล meta อื่นๆ
+Element ที่เราจะเห็นใน <head> คือ <title> <style> <meta> <link> <script> และ <base>
+
+Element: <title>
+Element <title> ระบุหัวเรื่องของหน้าเว็บ ซึ่งเป็นสิ่งจำเป็นสำหรับหน้าเว็บ HTML อย่างมาก
+จะแสดงบนแทปของเบราว์เซอร์
+จะแสดงเป็นชื่อหน้าเว็บเมื่อถูกบันทึกเป็น Favorite
+จะแสดงเป็นชื่อหน้าเว็บใน Search Engine
+<!DOCTYPE html>
+<html>
+    
+<head>
+  <title>ชื่อเรื่อง</title>
+</head>
+
+<body>
+
+<p>เนื้อหาในส่วนที่แสดงบนหน้าบราวเซอร์</p>
+
+</body>
+</html>
+
+Element: <style>
+Element <style> ใช้ในการระบุโค้ด CSS เพื่อตกแต่งหน้าเว็บนั้นเพียงหน้าเดียว
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+</style>
+</head>
+<body>
+
+<h1>This is header</h1>
+<p>This is paragraph</p>
+
+</body>
+</html>
+
+Element: <link>
+Element <link> ใช้ในการใส่ลิงก์ไฟล์ CSS เพื่อเชื่อมเอาโค้ด CSS มาใช้ในเพจ
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>This is header</h1>
+<p>This is paragraph</p>
+
+</body>
+</html>
+
+Element: <meta>
+Element <meta> ใช้ระบุว่า จะใช้ Character Set อะไร คำอธิบายหน้าเว็บ คีย์เวิร์ด ผู้เขียน และอื่นๆ
+Metadata ถูกใช้งานโดยเบราว์เซอร์ (แสดงเนื้อหาอย่างไร) โดย Search Engine (คีย์เวิร์ด) และพวก Web Services ต่างๆ
+ระบุรูปแบบตัวอักษร (Character Set) ที่ใช้
+<meta charset="UTF-8">
+คำอธิบายหน้าเว็บ
+<meta name="description" content="สอนโค้ดฟรี">
+ใส่คีย์เวิร์ด (Keywords) ให้ Search Engine
+<meta name="keywords" content="สอนฟรี, HTML, CSS, JavaScript">
+ระบุผู้เขียน
+<meta name="author" content="John Doe">
+ระบุให้บอทของ Search Engine ทำการสร้าง Index และเก็บข้อมูลเกี่ยวกับเว็บไซต์ของเรา ค่าที่ใส่ได้มี index หรือ noindex ตามด้วยคอมม่าและ follow หรือ nofollow
+<meta name="robots" content="index,follow">
+ตั้งค่า Viewport คือใช้ในการควบคุมการแสดงผลบนเบราว์เซอร์ ซึ่งอาจมาจากหลากหลายอุปกรณ์ มีความกว้างที่ไม่เท่ากัน เช่น โทรศัพท์มือถือมีขนาดหน้าจอเล็กกว่าจอคอมพิวเตอร์
+width=device-width เป็นตัวบอกว่าให้ความกว้างของหน้าเว็บแปรผันตามขนาดของหน้าจออุปกรณ์
+initial-scale=1.0 เป็นตัวบอกว่าอัตราซูม (Zoom) หน้าจอเมื่อโหลดหน้าเว็บครั้งแรกโดยเบราว์เซอร์
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+สั่งให้ refresh หน้า ทุกๆ กี่นาที ตามตัวอย่างนี้ คือ 30 วินาที
+<meta http-equiv="refresh" content="30">
+ตัวอย่าง <meta>
+<meta charset="UTF-8">
+<meta name="description" content="สอนโค้ดฟรี">
+<meta name="keywords" content="สอนฟรี, HTML, CSS, JavaScript">
+<meta name="author" content="John Doe">
+<meta name="robots" content="index,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+Element: <script>
+Element <script> ใช้ในการใส่ลิงก์ไฟล์ JavaScript เพื่อเชื่อมเอาโค้ด JavaScript มาใช้ในเพจ
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello JavaScript!";
+}
+</script>
+
+Element: <base>
+Element <base> ใช้ในการระบุ URL เริ่มต้นของหน้าเว็บ เพื่อเป็นจุดเริ่มต้นของ Relative Link ทั้งหมดในหน้าเว็บนั้นๆ
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <base href="http://www.code-th.com/images/" target="_blank">
+</head>
+<body>
+
+<img src="code_th.jpg">
+<p>เมื่อเราระบุ URL เริ่มต้นลงใน &lt;base&gt; แล้ว บราวเซอร์จะค้นหารูป code_th.jpg ที่ "http://www.code-th.com/images/code_th.jpg"</p>
+
+</body>
+</html>
+
+ลืมระบุ <html> <head> และ <body> ได้ไหม ?
+ในมาตรฐานของ HTML5 <html> <head> และ <body> สามารถละเว้นได้ โค้ดก็ยังสามารถใช้ได้อยู่
+<!DOCTYPE html>
+<title>Title</title>
+
+<h1>This is a header.</h1>
+<p>This is a paragraph.</p>
+
+Element ใน <head>
+Tag	      อธิบาย
+<head>	  ระบุข้อมูลเกี่ยวกับหน้าเว็บ
+<title>	  ใส่หัวเรื่องหน้าเว็บ
+<style>	  ใส่โค้ด CSS
+<link>	  ลิงก์ไฟล์ CSS
+<meta>	  ใส่ข้อมูล metadata เกี่ยวกับหน้าเว็บ
+<script>	ใส่โค้ด JavaScript หรือลิงก์ไฟล์ JavaScript
+<base>	  ใส่ URL เริ่มต้นของหน้าเว็บนั้นๆ
