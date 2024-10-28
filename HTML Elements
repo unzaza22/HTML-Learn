@@ -1,3 +1,19 @@
 <tagname>...เนื้อหา...</tagname>
 <p>ย่อหน้าแรก</p>
 // มีบาง Element ที่ไม่มีการปิด Tag ซึ่งเรียกว่า Empty Element เช่น <br> (คำสั่งเว้นบรรทัด)
+Nested HTML Elements
+<body>
+
+<h1>This is header</h1>
+<p>This is paragraph</p>
+
+</body>
+Empty HTML Elements
+HTML Elements ที่ไม่มีเนื้อหาเราเรียกว่า Empty Elements
+
+<br> คือ Empty Element ที่ไม่มีการปิด Tag (ใช้ระบุการเว้นบรรทัด)
+
+Empty Element สามารถปิด Tag ได้ด้วยการปิดใน Tag เปิด แบบนี้ <br/>
+
+HTML5 ไม่จำเป็นจะต้องปิด Tag Empty Element แต่ถ้าคุณต้องการเคร่งครัดความถูกต้อง หรือถ้าคุณต้องการแน่ใจว่ามันสามารถอ่านได้ใน XML parsers คุณต้องปิดทุกๆ Element
+ใช้ Tags ตัวพิมพ์เล็ก
