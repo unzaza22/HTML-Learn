@@ -1,0 +1,56 @@
+การใช้ Attribute Class กับบล๊อก
+Attribute classสามารถทำให้ element หลายๆ อันถูกกำหนด style ที่เหมือนกันได้โดยใช้ชื่อ class เดียวกัน
+ยกตัวอย่าง Element <div> ที่มีชื่อ class เดียวกัน:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.cities {
+    background-color: gray;
+    color: white;
+    margin: 20px 0 20px 0;
+    padding: 20px;
+} 
+</style>
+</head>
+<body>
+
+<div class="cities">
+<h2>กรุงเทพมหานคร</h2>
+<p>กรุงเทพมหานคร เป็นเมืองหลวงและนครที่มีประชากรมากที่สุดของประเทศไทย เป็นศูนย์กลางการปกครอง การศึกษา การคมนาคมขนส่ง การเงินการธนาคาร การพาณิชย์ การสื่อสาร และความเจริญของประเทศ</p>
+</div>
+
+<div class="cities">
+<h2>เชียงใหม่</h2>
+<p>จังหวัดเชียงใหม่มีประวัติศาสตร์อันยาวนาน เคยเป็นเมืองหลวงของอาณาจักรล้านนาแต่โบราณ มี "คำเมือง" เป็นภาษาท้องถิ่น มีเอกลักษณ์เฉพาะตัวทั้งด้านประเพณีวัฒนธรรม และมีแหล่งท่องเที่ยวจำนวนมาก</p>
+</div>
+
+<div class="cities">
+<h2>ภูเก็ต</h2>
+<p>ภูเก็ต เป็นจังหวัดหนึ่งทางภาคใต้ของประเทศไทย เป็นเกาะขนาดใหญ่ที่สุดในประเทศไทย อยู่ในทะเลอันดามัน</p>
+</div>
+
+</body>
+</html>
+
+การใช้ Attribute Class กับอินไลน์
+Attribute classสามารถทำให้ element หลายๆ อันถูกกำหนด style ที่เหมือนกันได้โดยใช้ชื่อ class เดียวกัน
+ยกตัวอย่าง Element <span> ที่มีชื่อ class เดียวกัน:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+span.note {
+    font-size: 120%;
+    color: red;
+}
+</style>
+</head>
+<body>
+
+<h1>My <span class="note">Important</span> Heading</h1>
+<p>This is some <span class="note">important</span> text.</p>
+
+</body>
+</html>
+
