@@ -103,5 +103,5 @@ document.getElementById("demo").innerHTML = "Hello JavaScript!";
 <noscript>Sorry, your browser does not support JavaScript!</noscript>
 
 Tag	        อธิบาย
-<script>	  ระบุโค้ด JavaScript ฝั่ง Client
+<script>	ระบุโค้ด JavaScript ฝั่ง Client
 <noscript>	แสดงเนื้อหากรณี JavaScript ฝั่งเบราว์เซอร์ไม่ทำงาน
