@@ -13,3 +13,95 @@ Click me to display Date and Time.</button>
 </body>
 </html> 
 
+Tag <script>
+Tag <script> ใช้เพื่อระบุภาษา JavaScript
+เบราว์เซอร์จะรู้ทันทีว่าโค้ดที่อยู่ภายใน Tag <script> จะต้องอ่านด้วยภาษา JavaScript ซึ่งเบราว์เซอร์ทุกตัวสามารถอ่านได้อยู่แล้ว
+หรือถ้าจะไม่เขียนโค้ดภายใน Tag <script> แต่ใช้วิธีดึงโค้ดจากไฟล์ JavaScript (.js) จากที่อื่นก็สามารถทำได้ โดยใช้ Attribute src
+ส่วนใหญ่ JavaScript จะถูกใช้กับงานรูป การกรอกแบบฟอร์ม การตรวจสอบการกรอกข้อมูล หรือทำให้เนื้อหายืดหยุ่น เคลื่อนไหว เปลี่ยนแปลงได้
+วิธีการระบุว่าจะให้โค้ด JavaScript ทำงานกับ Element ไหน ปกติจะใช้ document.getElementById(id)
+ยกตัวอย่างเช่น จะให้ JavaScript แสดงคำว่า "Hello JavaScript!" ภายใน Element ที่มี id = "testJavaScript" :
+<script>
+document.getElementById("testJavaScript").innerHTML = "Hello JavaScript!";
+</script> 
+
+สัมผัสกับ JavaScript
+ตัวอย่าง
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First JavaScript</h1>
+
+<p>JavaScript can change the content of an HTML element:</p>
+
+<button type="button" onclick="myFunction()">Click Me!</button>
+
+<p id="demo">This is a demonstration.</p>
+
+<script>
+function myFunction() { 
+    document.getElementById("demo").innerHTML = "Hello JavaScript!";
+}
+</script>
+
+</body>
+</html>
+
+ตัวอย่าง
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First JavaScript</h1>
+
+<p id="demo">JavaScript can change the style of an HTML element.</p>
+
+<script>
+function myFunction() {
+    document.getElementById("demo").style.fontSize = "25px"; 
+    document.getElementById("demo").style.color = "red";     
+}
+</script>
+
+<button type="button" onclick="myFunction()">Click Me!</button>
+
+</body>
+</html>
+
+ตัวอย่าง
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function light(sw) {
+    var pic;
+    if (sw == 0) {
+        pic = "lightoff.jpg"
+    } else {
+        pic = "lighton.jpg"
+    }
+    document.getElementById('myImage').src = pic;
+}
+</script>
+
+<img id="myImage" src="lightoff.jpg">
+
+<p>
+<button type="button" onclick="light(1)">Light On</button>
+<button type="button" onclick="light(0)">Light Off</button>
+</p>
+
+</body>
+</html>
+
+Tag <noscript>
+Tag <noscript> จะแสดงผลก็ต่อเมื่อเบราว์เซอร์ที่ใช้เปิดนั้นปิดการทำงานของ JavaScript ลง หรือเบราว์เซอร์นั้นไม่สนับสนุนการทำงานของ JavaScript
+<script>
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
+</script>
+
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+Tag	        อธิบาย
+<script>	  ระบุโค้ด JavaScript ฝั่ง Client
+<noscript>	แสดงเนื้อหากรณี JavaScript ฝั่งเบราว์เซอร์ไม่ทำงาน
