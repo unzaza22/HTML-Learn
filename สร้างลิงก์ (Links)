@@ -1,0 +1,116 @@
+Syntax
+<a href="url">...ข้อความลิงก์...</a>
+ตัวอย่าง
+<a href="http://www.code-th.com/">This is a link</a>
+
+Local Links
+Local Links คือ ลิงก์ที่มีเป้าหมายในเว็บไซต์ตัวเอง สามารถระบุโฟลเดอร์ได้เลย (โดนไม่ต้องมี http://www....)
+<a href="/html/lesson/styles">Go to HTML Styles</a>
+
+สีของลิงก์
+ค่าเริ่มต้นของทุกๆเบราว์เซอร์ คือ
+ลิงก์ที่ยังไม่เคยคลิก ขีดเส้นใต้และสีฟ้า
+ลิงก์ที่เคยคลิกแล้ว ขีดเส้นใต้และสีม่วง
+ระหว่างกดลิงก์ ขีดเส้นใต้และสีแดง
+คุณสามารถเปลี่ยนแปลงค่าได้โดยใช้ CSS
+<style>
+a:link    {color:green; background-color:transparent; text-decoration:none}
+a:visited {color:pink; background-color:transparent; text-decoration:none}
+a:hover   {color:red; background-color:transparent; text-decoration:underline}
+a:active  {color:yellow; background-color:transparent; text-decoration:underline}
+</style>
+
+Attribute: target
+Attribute target เอาไว้ระบุเจาะจงว่าจะเปิดหน้าเว็บที่ไหน
+โดยใส่ค่าได้เพียงค่าเดียว ดังตัวอย่างต่อไปนี้
+_blank - เปิดในหน้าต่างใหม่หรือในแทปใหม่
+_self - เปิดในหน้าต่างเดิมและเฟรมเดิม (ค่าเริ่มต้น)
+_parent - เปิดในหน้าต่างเดิม
+_top - เปิดในหน้าต่างเดิมแบบเต็มหน้าและยกเลิกเฟรมทั้งหมด
+ชื่อเฟรม - เปิดในเฟรมทีระบุชื่อ
+<p><a href="http://www.code-th.com/" target="_blank">This is a link 1</a></p>
+<p><a href="http://www.code-th.com/" target="_self">This is a link 2</a></p>
+<p><a href="http://www.code-th.com/" target="_parent">This is a link 3</a></p>
+<p><a href="http://www.code-th.com/" target="_top">This is a link 4</a></p>
+
+ทำรูปให้เป็นลิงก์
+<a href="http://www.code-th.com/">
+    <img src="code_th.jpg" alt="code-th.com" width="50" height="50">
+</a>
+
+สร้างบุ๊คมาร์ค (Create a Bookmark)
+<!DOCTYPE html>
+<html>
+<body>
+
+<p><a href="#C6">Jump to Chapter 6</a></p>
+
+<h2>Chapter 1</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 2</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 3</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 4</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 5</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2 id="C6">Chapter 6</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 7</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 8</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 9</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 10</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 11</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 12</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 13</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 14</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 15</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 16</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 17</h2>
+<p>This chapter explains ba bla bla</p>
+
+</body>
+</html>
+
+External Paths
+ลิงก์ไปยังหน้าเว็บอื่นสามารถทำได้โดยใส่ URL เต็มของเว็บนั้นๆ
+<a href="http://www.code-th.com/">This is a link</a>
+ลิงก์ไปยังหน้าเว็บตัวเอง สามารถระบุที่อยู่ของไฟวเดอร์และไฟล์ได้เลย
+<a href="/html/lesson/css">This is a link</a>
+ลิงก์ไปยังหน้าเว็บตัวเอง และไฟล์อยู่ไฟวเดอร์เดียวกัน ก็ระบุชื่อไฟล์ได้เลย
+<a href="htmlTest.html">This is a link</a>
+
+บทสรุป
+ใช้ <a> เพื่อสร้างลิงก์
+ใช้ Attribute href เพื่อระบุ URL
+ใช้ Attribute target เพื่อกำหนดวิธีเปิดลิงก์
+ใช้ <img> ภายใน <a> เพื่อทำรูปให้เป็นลิงก์
+ใช้ Attribute id (id="value") เพื่อกำหนดบุ๊คมาร์ค
+ใช้ Attribute href (href="#value") เพื่อลิงก์ไปยังบุ๊คมาร์ค
