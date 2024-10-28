@@ -1,0 +1,59 @@
+HTML Formatting
+<!DOCTYPE html>
+<html>
+<body>
+
+<p><b>This text is bold</b></p>
+<p><i>This text is italic</i></p>
+<p>This is<sub> subscript</sub> and <sup>superscript</sup></p>
+
+</body>
+</html>
+
+HTML Formatting Element
+บนก่อนหน้านี้ เราได้เรียนรู้เกี่ยวกับ Attibute style เพื่อระบุค่า CSS ในการตกแต่ง Element
+ภาษา HTML ก็สามารถตกแต่งข้อความใน Element ได้ เพื่อบอกถึงความหมายที่พิเศษต่างๆ
+เช่น เราใช้ <b> เพื่อให้รูปแบบตัวอักษรเป็นตัวหนา หรือ <i> เป็นตัวเอียง
+Element ที่ใช้ในการจัดรูปแบบข้อความ มีดังนี้
+<b>       ตัวหนา
+<strong>  ข้อความสำคัญ
+<i>       ตัวเอียง
+<em>      ข้อความเน้น
+<mark>    ทำไฮไลท์ข้อความให้น่าจดจำ
+<small>   ตัวพิมพ์เล็ก
+<del>     ขีดฆ่า
+<ins>     ข้อความแทรก
+<sub>     ตัวห้อย
+<sup>     ตัวยก
+
+HTML Element: <b> และ <strong>
+<p>This text is normal.</p>
+<p><b>This text is bold.</b></p>
+
+<p>This text is normal.</p>
+<p><strong>This text is strong.</strong></p>
+
+HTML Element: <i> และ <em>
+<p>This text is normal.</p>
+<p><i>This text is italic.</i></p>
+
+<p>This text is normal.</p>
+<p><em>This text is emphasized.</em></p>
+
+HTML Element: <small>
+<small>This text is small.</small>
+
+HTML Element: <mark>
+<mark>This text is marked.</mark>
+
+HTML Element: <del>
+<del>This text is deleted.</del>
+
+HTML Element: <ins>
+<ins>This text is inserted.</ins>
+
+HTML Element: <sub>
+This text is <sub>subscripted.</sub>
+
+HTML Element: <sup>
+This text is <sup>subscripted.</sup>
