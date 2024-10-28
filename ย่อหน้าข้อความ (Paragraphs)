@@ -1,0 +1,73 @@
+HTML Paragraphs
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>This is a paragraph 1</p>
+<p>This is a paragraph 2</p>
+<p>This is a paragraph 3</p>
+
+</body>
+</html>
+
+การแสดงผลของ HTML
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p>
+
+<p>
+This paragraph
+contains         a lot of spaces
+in the source         code,
+but the        browser 
+ignores it.
+</p>
+
+</body>
+</html>
+
+การเว้นบรรทัดใน HTML
+<br> คือโค้ดเว้นบรรทัด
+ใช้โค้ด <br> เมื่อต้องการขึ้นบันทัดใหม่โดยไม่ต้องขึ้นย่อหน้าใหม่
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>This is<br>a paragraph<br>with line breaks.</p>
+
+</body>
+</html>
+
+HTML Element: <pre>
+HTML Tag <pre> คือการระบุการจัดรูปแบบข้อความ
+สิ่งที่อยู่ใน Tag <pre> การแสดงผลของข้อความจะคงที่ จะคงรูปแบบเดิมไม่ตัดเว้นวรรคส่วนเกินและการเว้นบรรทัดออก
+<!DOCTYPE html>
+<html>
+<body>
+
+<pre>
+    Hold fast to dreams
+
+    For if dreams die
+
+    Life is a broken-winged bird
+
+    That cannot fly
+</pre>
+
+</body>
+</html>
+
+HTML Tag
+Tag	  อธิบาย
+<p>	  ระบุย่อหน้า
+<br>	คำสั่งเว้นบรรทัด
+<pre>	คงรูปแบบข้อความเดิม
