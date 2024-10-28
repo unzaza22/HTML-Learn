@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+   <h1>จังหวัดในประเทศไทย</h1>
+</header>
+  
+<nav>
+  <ul>
+    <li><a href="#">กรุงเทพมหานคร</a></li>
+    <li><a href="#">เชียงใหม่</a></li>
+    <li><a href="#">ภูเก็ต</a></li>
+  </ul>
+</nav>
+
+<article>
+  <h1>กรุงเทพมหานคร</h1>
+  <p>กรุงเทพมหานคร เป็นเมืองหลวงและนครที่มีประชากรมากที่สุดของประเทศไทย เป็นศูนย์กลางการปกครอง การศึกษา การคมนาคมขนส่ง การเงินการธนาคาร การพาณิชย์ การสื่อสาร และความเจริญของประเทศ</p>
+</article>
+
+<footer>Copyright &copy; code-th.com</footer>
+
+</div>
+
+</body>
+</html>
+
+Element ระบุส่วนของ Layout
+ปกติเว็บไซต์จะแสดงเนื้อหาหลากหลายคอลัมน์ คล้ายๆ กับแมกกาซีนหรือหนังสือพิมพ์
+เมื่อก่อนเวลาจะสร้าง layout เราจะใช้ <div> แต่ใน HTML5 มี Element ใหม่เพิ่มเติม
+เพื่อใช้ในการระบุส่วนต่างๆ ของเว็บไซต์ได้ดีขึ้น และบอกความหมายแก่ Search Engine ได้ดีขึ้น
+<header>
+<nav>
+<article>
+<section>
+<aside>
+<footer>
+
+Element: <header>
+เป็น Element ที่ใช้ครอบเนื้อหาที่เป็นต้นขั้วของเอกสาร
+<!DOCTYPE html>
+<html>
+<body>
+
+<header>
+<h1>Heading A</h1>
+<p>เนื้อหาส่วนนี้เป็นของ Heading A</p>
+<h2>Heading B</h2>
+<p>เนื้อหาส่วนนี้เป็นของ Heading B</p>
+<h2>Heading C</h2>
+<p>เนื้อหาส่วนนี้เป็นของ Heading C</p>
+</header>
+<p>คำถาม: เนื้อหาส่วนนี้เป็นของ Heading ไหน?</p>
+
+</body>
+</html>
+
+Element: <nav>
+คือ การนำทางหรือ ลิ้งค์นำทาง nav ไม่จำเป็นต้อง ใส่อันต่ออัน สามารถใส่ครอบคลุมทีเดียวหลายๆอันได้เลย นิยมใช้กับ Navigation Bar หรือ Menu Bar ของเว็บไซต์
+<!DOCTYPE html>
+<html>
+<body>
+
+<nav>
+<a href="/html/lesson/index">HTML</a> |
+<a href="/css/lesson/index">CSS</a> |
+<a href="/js/lesson/index">JavaScript</a>
+</nav>
+
+</body>
+</html>
+
