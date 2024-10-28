@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>An Unordered List:</h3>
+<ul>
+  <li>Item</li>
+  <li>Item</li>
+  <li>Item</li>
+  <li>Item</li>    
+</ul>
+<h3>An Ordered List:</h3>
+<ol>
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+  <li>Fourth item</li>  
+</ol>
+
+</body>
+</html>
+
+รายการแบบไม่เรียงลำดับ (Unordered Lists)
+สร้างรายการแบบไม่เรียงลำดับเริ่มด้วย Tag <ul> และแต่ละข้อเริ่มด้วย Tag <li>
+รายการจะเป็นแบบ bullets (วงกลมสีดำ) เป็นค่าเริ่มต้น
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+หากต้องการเปลี่ยนสัญลักษณ์แต่ละข้อ สามารถทำได้โดยกำหนด property list-style-type ใน CSS
+ค่าที่สามารถใส่ได้ดูจากตารางต่อไปนี้
+
+ค่า	    อธิบาย
+disc	  สัญลักษณ์เป็นวงกลมสีดำ
+circle	สัญลักษณ์เป็นวงกลม
+square	สัญลักษณ์เป็นสีเหลี่ยมสีดำ
+none	  ไม่มีสัญลักษณ์
+
+รายการแบบเรียงลำดับ (Ordered List)
+สร้างรายการแบบเรียงลำดับเริ่มด้วย Tag <ol> และแต่ละข้อเริ่มด้วย Tag <li>
+รายการจะมีตัวเลขเรียงลำดับนำหน้า เป็นค่าเริ่มต้น
+<ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+หากต้องการเปลี่ยนรูปแบบการเรียงลำดับ สามารถทำได้โดยกำหนด Attribute type ของ Tag <ol>
+ค่าที่สามารถใส่ได้ดูจากตารางต่อไปนี้
+
+ค่า	      อธิบาย
+type="1"	เรียงลำดับด้วยตัวเลข
+type="A"	เรียงลำดับด้วยตัวอักษรภาษาอังกฤษตัวใหญ่
+type="a"	เรียงลำดับด้วยตัวอักษรภาษาอังกฤษตัวเล็ก
+type="I"	เรียงลำดับด้วยตัวอักษรโรมันตัวใหญ่
+type="i"	เรียงลำดับด้วยตัวอักษรโรมันตัวเล็ก
+
+รายการคำอธิบาย (Description Lists)
+สร้างรายการคำอธิบายโดยมีหัวข้อและคำอธิบายแต่ละหัวข้อ เริ่มต้นด้วย Tag <dl> เพื่อระบุรายการคำอธิบาย
+ส่วนหัวข้อเริ่มด้วย Tag <dt> และคำอธิบายในหัวข้อนั้นๆ ใช้ Tag <dd>
+คำอธิบายในหัวข้อ จะเป็นการย่อหน้าเข้า ไม่มีสัญลักษณ์อะไร
+<dl>
+  <dt>Coffee</dt>
+  <dd>- black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>- white cold drink</dd>
+</dl>
+
+รายการซ้อนรายการ (Nested Lists)
+<ul>
+  <li>Coffee</li>
+  <li>Tea
+    <ul>
+      <li>Black tea</li>
+      <li>Green tea</li>
+    </ul>
+  </li>
+  <li>Milk</li>
+</ul>
+
+รายการแนวนอน (Horizontal Lists)
+รายการสามารถตกแต่งได้หลากหลายแบบด้วย CSS
+หนึ่งในวิธีที่ได้รับความนิยมมากที่สุด คือ รายการแบบแนวนอน เพื่อสร้างเมนู
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+</body>
+</html>
+
+บทสรุป
+ใช้ <ul> สร้างรายการแบบไม่เรียงลำดับ
+ใช้ Property CSS list-style-type เลือกประเภทสัญลักษณ์หน้าข้อ
+ใช้ <ol> สร้างรายการแบบเรียงลำดับ
+ใช้ Attribute type กำหนดประเภทการเรียงลำดับ
+ใช้ <li> สร้างรายการแต่ละข้อ
+ใช้ <dl> สร้างรายการคำอธิบาย
+ใช้ <dt> สร้างหัวเรื่องคำอธิบาย
+ใช้ <dd> สร้างคำอธิบายแต่ละข้อ
+รายการสามารถซ้อนรายการได้
+รายการสามารถมี Element อื่นๆได้ นอกจากข้อความ
+ใช้ Property CSS float: left หรือ display: inline เพื่อแสดงในแนวนอน
