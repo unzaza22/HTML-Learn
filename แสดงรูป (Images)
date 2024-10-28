@@ -1,0 +1,47 @@
+HTML Images
+ใส่รูปภาพใน HTML โดยใช้ Tag <img>
+ภายใน attribute src ระบุที่อยู่ของไฟล์รูป
+alt ใส่ข้อความอธิบายหากรูปภาพไม่ขึ้น
+width ระบุความกว้างของรูป
+height ระบุความสูงของรูป
+<img src="code_th.jpg" alt="code-th.com" width="50" height="50">
+หรือเราสามารถใช้ CSS ใน Attribute style เพื่อตกแต่ง Element รูปภาพ
+<img src="code_th.jpg" alt="code-th.com" style="width:50px; height: 50px;">
+
+ทำรูปให้เป็นลิงก์
+ใช้ Element <a> ครอบ Element <img> อีกที
+<a href="http://www.code-th.com/">
+    <img src="code_th.jpg" alt="code-th.com" width="50" height="50">
+</a>
+เบราว์เซอร์ IE บางเวอร์ชั่นอาจแสดงกรอบรูปเมื่อรูปกลายเป็นลิงก์ แก้ได้โดยกำหนดค่าใน style="border:0;"
+
+Image Floating
+<p><img src="code_th.jpg" alt="code-th.com" style="float:right;width:50px;height:50px;">
+The image will float to the right of the text.</p>
+
+<p><img src="code_th.jpg" alt="code-th.com" style="float:left;width:50px;height:50px;">
+The image will float to the left of the text.</p>
+
+Image Maps
+ใช้ Tag <map> ในการระบุ image-map
+image-map คือรูปที่เราสามารถกำหนดพื้นที่ที่สามารถคลิกได้
+Attribute name ของ <map> จะทำงานประสานกับ Attribute usemap ของ Element <img>
+ภายใน <map> จะประกอบด้วย Tag <area> ที่ระบุพื้นที่ที่ต้องการให้สามารถคลิกได้
+<img src="planets.gif" alt="Planets" usemap="#planetmap" style="width:145px;height:126px;">
+
+<map name="planetmap">
+  <area shape="rect" coords="0,0,82,126" alt="Sun" href="sun.htm">
+  <area shape="circle" coords="90,58,3" alt="Mercury" href="mercur.htm">
+  <area shape="circle" coords="124,58,8" alt="Venus" href="venus.htm">
+</map>
+
+บทสรุป
+ใช้ <a> เพื่อแสดงรูป
+ใช้ Attribute src เพื่อระบุ URL ของรูป
+ใช้ Attribute alt เพื่อแสดงข้อความหากรูปโหลดไม่ขึ้น
+ใช้ Attribute width และ height เพื่อกำหนดขนาดของรูป
+ใช้ Property CSS width และ height เพื่อกำหนดขนาดของรูป (แนะนำ)
+ใช้ Property CSS float เพื่อจัดวางรูปให้อยู่ด้านซ้ายหรือขวาของข้อความ
+ใช้ <map> เพื่อระบุ image-map
+ใช้ <area> เพื่อระบุพื้นที่ภายในรูปที่ต้องการให้สามารถคลิกได้
+ใช้ Attribute usemap ของ Element <img> เพื่อเชื่อมการทำงานกับ image-map
