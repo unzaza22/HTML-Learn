@@ -1,0 +1,22 @@
+ใส่คำอธิบายด้วย Tag คอมเมนต์
+<!-- Write your comments here -->
+
+<p>Example</p>
+
+<!-- Remember to add more information here -->
+<!-- <img src="code_th.jpg" alt="code-th.com" width="50" height="50"> -->
+
+คอมเมนต์แบบกำหนดเงื่อนไข
+<!--[if IE 8]>
+<p>Welcome to Internet Explorer 8.</p>
+<![endif]-->
+
+operators	ตัวอย่าง	                  อธิบาย
+!	        [if !IE]	                เครื่องหมาย NOT คือค่าตรงข้าม
+lt	      [if lt IE 5.5]	          ย่อมาจาก less than คือน้อยกว่า
+lte	      [if lte IE 6]	            ย่อมาจาก less than or equal คือน้อยกว่าหรือเท่ากับ
+gt	      [if gt IE 5]	            ย่อมาจาก greater than คือมากกว่า
+gte	      [if gte IE 5]	            ย่อมาจาก greater than or equal คือมากกว่าหรือเท่ากับ
+()	      [if !(IE 7)]	            วงเล็บ ใช้ในการเชื่อมเงื่อนไขเพื่อสร้างเงื่อนไขที่ซับซ้อนมากขึ้น
+&	        [if (gt IE 5)&(lt IE 7)]	เครื่องหมาย AND (และ)
+|	        [if (IE 6)|(IE 7)]	      เครื่องหมาย OR (หรือ)
