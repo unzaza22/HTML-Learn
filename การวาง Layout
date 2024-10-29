@@ -123,3 +123,96 @@ Element: <nav>
 </body>
 </html>
 
+Element: <article>
+จะใช้ครอบคลุมสิ่งที่มีความหมายในตัวของมันเองบนเว็บเพจ
+เช่น ข่าว บทความ เป็นต้น สังเกตว่าสิ่งเหล่านี้ ไม่ว่าจะวางไว้ตรงไหน ยังคงมีความหมายอยู่ สามารถเข้าใจได้
+นอกจากนั้นแล้ว <article> ยังสามารถใช้ซ้อนกันภายใน <article> เองได้อีกด้วย
+ซึ่งจะใช้ในกรณีที่เนื้อหาภายใน <article> นั้นๆ มีบางส่วน ที่มีความหมายในตัวของมันเอง แม้ว่าจะตัดเนื้อหารอบๆ ออกก็ยังอ่านเข้าใจ เช่น ความคิดเห็นของบทความ เป็นต้น
+<!DOCTYPE html>
+<html>
+<body>
+
+<article>
+<h1>Google Chrome</h1>
+<p>Google Chrome is a free, open-source web browser developed by Google.</p>
+</article>
+
+</body>
+</html>
+
+Element: <section>
+คือ การแบ่งกลุ่มเนื้อหาออกเป็นส่วนๆ เช่น การแบ่งบทความออกเป็น chapter หรือแบ่งเนื้อหาทั้งหมดออกเป็นประเด็นย่อยๆ
+อย่างการแบ่งข่าวออกเป็น กลุ่มของข่าวในพระราชสำนัก กลุ่มของข่าวกีฬา กลุ่มของข่าวบันเทิง เป็นต้น
+โดยทั่วไปเรามักจะใช้ Section ภายใน Article และเนื้อหาภายใน section จะต้องเกี่ยวข้องกันทั้งหมด
+ที่สำคัญคือ section ไม่ได้ใช้สำหรับแบ่งเว็บเพจออกเป็นส่วนๆ ไม่ได้ใช้สำหรับทำ Layout ถ้าอยากทำ Layout ให้ใช้ div แทน
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Red Delicious</h3>
+<p>These bright red apples are the most common found in many supermarkets.</p>
+</section>
+
+</body>
+</html>
+
+Element: <aside>
+ส่วนของเนื้อหาที่เกี่ยวของกับเนื้อหาหลักที่อยู่โดยรอบ โดยมีจุดประสงค์เพื่อให้แยกออกจากเนื้อหาหลัก
+และใช้เป็นกรอบคำอธิบายเพิ่มเติมที่เกี่ยวข้องกับเนื้อหาหลัก และนอกจากนี้ <aside> ยังสามารถใช้เป็นส่วนของ แถบด้านข้าง (Sidebar) ได้อีกด้วย
+<!DOCTYPE html>
+<html>
+<body>
+
+<aside>
+<h4>Epcot Center</h4>
+</aside>
+
+</body>
+</html>
+
+Element: <footer>
+แท็ก footer เป็นแท็กที่ใช้สำหรับใส่อะไรก็ได้ที่อยู่ด้านล่างๆ อย่างเช่น creadit ผู้แต่งเว็บไซต์ หรือหน้า site map รวบรวมลิ้งก์ของเว็บไซต์เราเอง
+<!DOCTYPE html>
+<html>
+<body>
+
+<footer>
+<p>Posted by: Jon Doe</p>
+<p>Contact information: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="71021e1c141e1f14311409101c011d145f121e1c">[email&#160;protected]</a> </p>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
+
+วิธีการสร้าง Layout
+การสร้าง Loayout มีหลายวิธี
+ใช้ตาราง HTML
+ใช้ Property float ของ CSS
+ใช้ CSS Framework
+ใช้ CSS flexbox
+
+อย่าใช้ตารางสร้าง Layout โดยเด็ดขาด
+
+Tag ที่ใช้กับ Layout
+Tag	            อธิบาย
+<header>	    ใช้ระบุส่วนของ Header
+<nav>	        ใช้ระบุส่วนของ Navigation, Link, Menu
+<section>	    ใช้ระบุส่วนของ Section
+<main>	        ใช้ระบุส่วนของเนื้อหาหลัก
+<article>	    ใช้ระบุส่วนของเนื้อหา
+<aside>	        ใช้ระบุส่วนของเนื้อหาด้านข้าง
+<footer>	    ใช้ระบุส่วนของด้านล่าง
+<details>	    ใช้ระบุส่วนของรายละเอียดของเนื้อหาซึ่งผู้ใช้งานสามารถ ซ่อนหรือแสดงได้
+<summary>	    ใช้ระบุเป็นส่วนหัวของ Tag details
+<figure>	    ใช้ระบุ self-contained content เช่น รูปภาพ, แผนภูมิ, โค้ด
+<figcaption>	ใช้ระบุรายละเอียดของ Tag figure
+<mark>	        ใช้ระบุไฮไลท์ข้อความ
+<time>	        ใช้ระบุวันที่/เวลา
+<bdi>	        (Bi-Direction) ใช้ระบุข้อความที่มีรูปแบบไม่เหมือนกับเนื้อหาปกติ เช่น ภาษาที่มีการอ่านจากขวาไปซ้าย
+<wbr>	        ใช้ระบุข้อความที่สามารถตัดคำได้
+<dialog>	    ใช้ระบุ Dialog/Window
+<meter>	        ใช้แสดงข้อมูลในรูปแบบเกจ (กราฟแท่ง)
+<progress>	    ใช้แสดงสถานะความคืบหน้าในรูปแบบเกจที่เคลื่อนไหวได้ (กราฟแท่ง)
+<ruby>	        ใช้ระบุ ruby annotation (East Asian typography)
+<rt>	        ใช้ระบุคำอธิบาย/ชี้แจ้งของตัวอักษร (East Asian typography)
+<rp>	        ใช้ระบุตัวอักษรแทน ruby annotations หากเบราเซอร์ไม่รองรับ
