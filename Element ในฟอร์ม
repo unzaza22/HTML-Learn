@@ -1,0 +1,94 @@
+Element: <input>
+<input> เป็น Element ที่สำคัญที่สุด
+<input> สามารถใช้สร้างช่องกรอกข้อมูลได้หลายแบบ ขึ้นอยู่กับประเภทที่เรากำหนดใน Attribute type
+คุณจะได้เรียนรู้รายละเอียดในบทประเภท Input
+
+Element: <select>
+<select> ใช้สร้างตัวเลือกแบบ drop-down
+<select name="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+<option> ใช้สร้างตัวเลือก
+<option> ตัวแรกจะถูกเลือกเป็นค่าเริ่มต้น
+ถ้าต้องการให้รายการใดถูกเลือกมาก่อน ให้ใส่ Attribute selected ไปใน Tag <option>
+<option value="fiat" selected>Fiat</option>
+
+Element: <textarea>
+<textarea> ใช้สร้างช่องกรอกข้อมูลแบบหลายบรรทัด
+<textarea name="message" rows="10" cols="30">
+The cat was playing in the garden.
+</textarea>
+Attribute rows ใช้ระบุจำนวนแถวที่มองเห็นได้ของช่องกรอกข้อมูล
+Attribute cols ใช้ระบุความกว้างของช่องกรอกข้อมูล
+
+Element: <button>
+<button> ปุ่มที่สามารถคลิกได้
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+Element ใหม่ใน HTML5
+ใน HTML5 มีการเพิ่ม Element ใหม่ดังนี้ คือ
+<datalist>
+<keygen>
+<output>
+บราวเซอร์รุ่นเก่าอาจจะไม่แสดง Element ที่ไม่รู้จัก แต่หน้าเว็บก็ยังสามารถใช้งานได้
+
+Element: <datalist>
+<datalist> ใช้สร้าง autocomplete ให้กับ <input>
+autocomplete คือรายการข้อมูลที่ถูกระบุเตรียมไว้ก่อนแล้ว เมื่อพิมพ์ข้อความลงในกล่องแล้วสะกดตรงกับข้อมูล ก็จะขึ้นรายการมาให้โดยไม่จำเป็นต้องพิมพ์ทุกตัวอักษร
+Attribute list ของ <input> จะต้องมีค่าตรงกับ Attribute id ของ <datalist>
+<form action="action_page.php">
+  <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input type="submit">
+</form>
+
+Element: <keygen>
+<keygen> ถูกกำหนดให้ ใช้คู่กับ form เพื่อทำการ generator การเข้ารหัสให้กับ ข้อมูลใน form
+ใช้เพื่อระบบความปลอดภัยในกาส่งข้อมูลจาก Client ไปยัง Server
+เมื่อ form ถูก submit private key จะถูกจัดเก็บไว้ยัง เครื่องคอมพิวเตอร locally หรือเครื่อง Client และ public key จะถูกส่งไปยัง server
+<form action="action_page.php">
+  Username: <input type="text" name="user">
+  <br><br>
+  Encryption: <keygen name="security">
+  <br><br>
+  <input type="submit">
+</form>
+
+Element: <output>
+<output> ใช้ในการสร้างการแสดงผลลัพธ์ของการคำนวนในแบบฟอร์มแบบทันที (Real-Time)
+<form action="action_page.php"
+oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0
+  <input type="range" id="a" name="a" value="50">
+  100 +
+  <input type="number" id="b" name="b" value="50">
+  =
+  <output name="x" for="a b"></output>
+  <br><br>
+  <input type="submit">
+</form>
+
+สรุป Element ที่ใช้กับ <form>
+Element	    อธิบาย
+<form>	    สร้างแบบฟอร์มในการกรอกข้อมูล
+<input>	    สร้างช่องกรอกข้อมูลแบบต่างๆ
+<textarea>	สร้างช่องกรอกข้อความแบบหลายบรรทัด
+<label>	    ติดป้ายชื่อให้กับช่องกรอกข้อมูล
+<fieldset>	จัดกลุ่มให้กับ Element ในฟอร์ม
+<legend>	  ตั้งชื่อให้กับ <fieldset>
+<select>	  สร้างตัวเลือกแบบ drop-down
+<option>	  ระบุตัวเลือกใน drop-down
+<optgroup>	จัดกลุ่มให้กับ <option> ของ drop-down
+<button>	  สร้างปุ่ม
+<datalist>	เตรียมข้อความไว้ล่วงหน้าในสำหรับช่องกรอกข้อความ <input>
+<keygen>	  ใช้เข้ารหัสให้กับฟอร์ม
+<output>	  แสดงผลการคำนวน
