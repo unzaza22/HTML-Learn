@@ -1,0 +1,45 @@
+ตัวสัญลักษณ์ใน HTML
+ต่อจากบทที่แล้ว บทนี้จะกล่าวถึงสัญลักษณ์ที่ไม่ปรากฎอยู่บนคีย์บอร์ดของคุณ
+สัญลักษณ์ทางคณิตศาสตร์ ทางเทคนิค ทางเงินตรา ปกติแล้วจะไม่ปรากฎอยู่บนคีย์บอร์ด
+ถ้าต้องการพิมพ์สัญลักษณ์เหล่านี้ ให้ใช้วิธีเดียวกันกับพิมพ์ตัวอักษรพิเศษคือ ใช้ Entity Name และ Entity Number
+และถ้าเป็นกรณี Entity Number คุณสามารถใส่รหัสตัวอักษรเป็นเลขฐานสิบ หรือเลขฐานสิบหกก็ได้ เช่น
+<p>สัญลักษณ์เงินยูโร &euro;</p>
+<p>สัญลักษณ์เงินยูโร &#8364;</p>
+<p>สัญลักษณ์เงินยูโร &#x20AC;</p>
+
+ตัวอย่างสัญลักษณ์ทางคณิตศาสตร์ใน HTML
+สัญลักษณ์	Entity Number ฐานสิบ	  Entity Name	  อธิบายสัญลักษณ์
+∀	        &#8704;	              &forall;	    FOR ALL
+∂	        &#8706;	              &part;	      PARTIAL DIFFERENTIAL
+∃	        &#8707;	              &exist;	      THERE EXISTS
+∅	        &#8709;	              &empty;	      EMPTY SETS
+∇	        &#8711;	              &nabla;	      NABLA
+∈	        &#8712;	              &isin;	      ELEMENT OF
+∉	        &#8713;	              &notin;	      NOT AN ELEMENT OF
+∋	        &#8715;	              &ni;	        CONTAINS AS MEMBER
+∏	        &#8719;	              &prod;	      N-ARY PRODUCT
+∑	        &#8721;	              &sum;	        N-ARY SUMMATION
+
+ตัวอย่างอักษรกรีกใน HTML
+สัญลักษณ์	Entity Number ฐานสิบ	  Entity Name	  อธิบายสัญลักษณ์
+Α	        &#913;	              &Alpha;	      GREEK CAPITAL LETTER ALPHA
+Β	        &#914;	              &Beta;	      GREEK CAPITAL LETTER BETA
+Γ        	&#915;	              &Gamma;	      GREEK CAPITAL LETTER GAMMA
+Δ	        &#916;	              &Delta;	      GREEK CAPITAL LETTER DELTA
+Ε	        &#917;	              &Epsilon;	    GREEK CAPITAL LETTER EPSILON
+Ζ	        &#918;	              &Zeta;	      GREEK CAPITAL LETTER ZETA
+
+ตัวอย่างสัญลักษณ์อื่นๆ ใน HTML
+สัญลักษณ์	Entity Number ฐานสิบ	  Entity Name	  อธิบายสัญลักษณ์
+©	        &#169;	              &copy;	      COPYRIGHT SIGN
+®	        &#174;	              &reg;	        REGISTERED SIGN
+€	        &#8364;	              &euro;	      EURO SIGN
+™	        &#8482;	              &trade;	      TRADEMARK
+←	        &#8592;	              &larr;	      LEFTWARDS ARROW
+↑	        &#8593;	              &uarr;	      UPWARDS ARROW
+→	        &#8594;	              &rarr;	      RIGHTWARDS ARROW
+↓	        &#8595;	              &darr;	      DOWNWARDS ARROW
+♠	        &#9824;	              &spades;	    BLACK SPADE SUIT
+♣	        &#9827;	              &clubs;	      BLACK CLUB SUIT
+♥	        &#9829;	              &hearts;	    BLACK HEART SUIT
+♦	        &#9830;	              &diams;	      BLACK DIAMOND SUIT
