@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="#">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse">
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+</body>
+</html>
+
+Element: <form>
+Element <form> ใช้ในการสร้างแบบฟอร์มกรอกข้อมูล
+<form>
+.
+form elements
+.
+</form>
+ภายใน Element <form> จะประกอบด้วย Element ต่างๆ ในการสร้างช่องกรอกข้อมูล
+ซึ่ง Element ประเภทต่างๆ ประกอบด้วย ช่องกรอกข้อความ กล่องติ๊กถูก ตัวเลือก ปุ่ม Submit และอื่นๆ
+
+Element: <input>
+<input> เป็น Element ที่สำคัญที่สุด
+<input> สามารถใช้สร้างช่องกรอกข้อมูลได้หลายแบบ ขึ้นอยู่กับประเภทที่เรากำหนดใน Attribute type
+ตัวอย่าง:
+ประเภท	              อธิบาย
+<input type="text">	  สร้างกล่องกรอกข้อความบรรทัดเดียว (Text Input)
+<input type="radio">	สร้างตัวเลือกแบบเลือกข้อใดข้อหนึ่ง (radio button)
+<input type="submit">	สร้างปุ่ม Submit
+คุณจะได้เรียนรู้รายละเอียดในบทประเภท Input
+
+ช่องกรอกข้อความบรรทัดเดียว (Text Input)
+<input type="text"> ใช้ในการสร้างกล่องกรอกข้อความบรรทัดเดียว (Text Input)
+<form>
+  First name:<br>
+  <input type="text" name="firstname"><br>
+  Last name:<br>
+  <input type="text" name="lastname">
+</form>
+ตัว Element <form> เอง จะมองไม่เห็น และค่าเริ่มเต้นความกว้างกล่องกรอกข้อความคือ 20 ตัวอักษร
+
+ตัวเลือกข้อใดข้อหนึ่ง (Radio Button)
+<input type="radio"> สร้างตัวเลือกแบบเลือกข้อใดข้อหนึ่ง (radio button)
+Radio button จะสามารถเลือกได้เพียงตัวเลือกเดียวเท่านั้น
+<form>
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other  
+</form> 
+
+ปุ่ม Submit
+<input type="submit"> สร้างปุ่ม Submit คือส่งข้อมูลที่กรอกในฟอร์มไปยังตัวรับข้อมูล (form-handler)
+ตัวรับข้อมูลทั่วไปก็จะเป็นหน้าเว็บที่มีโค้ดในการประมวลผลข้อมูลที่ส่งมา
+ตัวรับข้อมูลจะระบุอยู่ใน Attribute action ใน Tag <form>
+<form action="action_page.php">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+Attribute: action
+Attribute action ใช้ในการระบุว่าเมื่อ submit แบบฟอร์มแล้วจะส่งข้อมูลไปที่ไหน ซึ่งปกติก็เป็นหน้าเว็บอีกหน้าหนึ่งที่มีโค้ดในการรับไฟล์ไปประมวลผล
+อย่างในตัวอย่าง แบบฟอร์มจะส่งข้อมูลไปยังหน้าเว็บที่ชื่อว่า "action_page.php" ซึ่งเป็นโค้ดฝั่งเซิฟเวอร์รับข้อมูลไปทำงานต่อ
+<form action="action_page.php">
+ถ้า Attribute action ถูกเว้นว่างไว้ หรือไม่ได้ระบุไว้ ค่าเริ่มต้นก็จะเป็นหน้าเว็บนั้นๆ
+
+Attribute: method
+Attribute method ใช้ในการระบุวิธีการส่งค่าของ http ว่าจะให้ส่งแบบ GET หรือแบบ POST เมื่อ submit ฟอร์มแล้ว
+<form action="action_page.php" method="get">
+หรือ
+<form action="action_page.php" method="post">
+
+เมื่อไหร่ใช้ GET ?
+ค่าเริ่มต้นของการส่งข้อมูลคือแบบ GET อยู่แล้ว
+การส่งข้อมูลด้วยวิธี GET คือการส่งข้อมูลผ่าน URL เลย เมื่อ submit แบบฟอร์มข้อมูลที่กรอกในฟอร์มจะมองเห็นได้บน URL ของหน้าเว็บ
+action_page.php?firstname=Mickey&lastname=Mouse
+เราจะไม่ใช้วิธีการส่งแบบ GET กับข้อมูลที่สำคัญ ต้องการการปกปิด การส่งแบบ GET เหมาะกับข้อมูลธรรมดา ความยาวสั้นๆ เพราะการส่งผ่าน URL นั้นมีความยาวจำกัด
+
+เมื่อไหร่ใช้ POST ?
+คุณควรใช้ POST กับการกรอกข้อมูลที่มีความสำคัญหรือข้อมูลส่วนตัว การส่งแบบ POST เมื่อกด Submit จะไม่แสดงข้อมูลใดๆบน URL ของหน้าเว็บ และไม่จำกัดความยาวของข้อมูลอีกด้วย
+
+Attribute: name
+ในแต่ละช่องกรอกข้อมูลจะต้องต้องมี Attribute name ในการ submit เสมอ
+ถ้าไม่ระบุชื่อใน Attribute name ข้อมูลจะไม่ถูกส่ง
+
+จัดกลุ่มแบบฟอร์มด้วย <fieldset>
+<fieldset> คือการจัดกลุ่มข้อมูลที่เกี่ยวข้องกันในแบบฟอร์ม
+<legend> จะระบุหัวข้อของ <fieldset>
+<form action="action_page.php">
+  <fieldset>
+    <legend>Personal information:</legend>
+    First name:<br>
+    <input type="text" name="firstname" value="Mickey"><br>
+    Last name:<br>
+    <input type="text" name="lastname" value="Mouse"><br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+
+Attribute ที่ใช้กับ <form>
+Attribute	      อธิบาย
+accept-charset	ระบุ Character Set ที่ใช้ในการส่งข้อมูล (ค่าเริ่มต้นคือค่าเดียวกับเว็บเพจ)
+action	        ระบุ URL ที่จะส่งข้อมูลไปเมื่อกด Submit (ค่าเริ่มต้นคือหน้าเดิม)
+autocomplete	  ระบุให้เบราว์เซอร์เปิดหรือปิด autocomplete ของแบบฟอร์ม (ค่าเริ่มต้นคือเปิด)
+enctype	        ระบุการ Encode เมื่อ submit ข้อมูล
+method	        ระบุวิธีการส่ง http เมื่อกด submit (ค่าเริ่มต้นคือ GET)
+name	          ระบุชื่อของแบบฟอร์ม (สำหรับการใช้ DOM เช่น document.forms.name)
+novalidate	    ระบุเพื่อบอกเบราว์เซอร์ให้ไม่ต้องตรวจสอบความถูกต้องของข้อมูลในฟอร์ม
+target	        เอาไว้ระบุเจาะจงว่าจะทำงาน action ที่หน้าต่างไหน
