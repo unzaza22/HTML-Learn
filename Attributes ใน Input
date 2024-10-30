@@ -1,0 +1,249 @@
+Attribute: value
+value ใช้ระบุค่าเริ่มต้นของกล่องข้อความ
+ตัวอย่าง
+<form action="">
+First name:<br>
+<input type="text" name="firstname" value="John">
+</form>
+
+Attribute: readonly
+readonly ใช้ระบุให้กล่องข้อความนั้นดูได้อย่างเดียว ไม่สามารถแก้ไขได้
+ตัวอย่าง
+<form action="">
+First name:<br>
+<input type="text" name="firstname" value="John" readonly>
+</form>
+
+Attribute: disabled
+disabled ใช้ระบุให้กล่องข้อความถูกปิดการใช้งาน ไม่สามารถใช้ได้ คลิกก็ไม่ได้ และค่าก็จะไม่ถูกส่งหากฟอร์มถูก Submit
+ตัวอย่าง
+<form action="">
+First name:<br>
+<input type="text" name="firstname" value="John" disabled>
+</form>
+
+Attribute: size
+size ใช้ระบุขนาดของกล่องข้อความ หน่วยเป็นตัวอักษร
+ตัวอย่าง
+<form action="">
+First name:<br>
+<input type="text" name="firstname" value="John" size="40">
+</form>
+
+Attribute: maxlength
+maxlength ใช้ระบุจำนวนตัวอักษรที่อนุญาตให้กรอกได้
+ตัวอย่าง
+<form action="">
+First name:<br>
+<input type="text" name="firstname" maxlength="10">
+</form>
+ด้วย maxlength เบราว์เซอร์จะไม่ให้คีย์ข้อความเกินจำนวนที่ระบุไว้ แต่จะไม่มีการส่ง feedback ใดๆ กลับมา ถ้าต้องการให้มีการขึ้นเตือนต้องใช้โค้ด JavaScript ทำงานร่วมด้วย
+การใส่เงื่อนไข Input ต่างๆ ไม่สามารถป้องกันการผิดพลาดได้ 100% เพราะ HTML และ JavaScript ล้วนเป็นโค้ดที่ทำงานฝั่งเบราวเซอร์ ซึ่งสามารถแก้ไขหรือหาทางหลีกเลี่ยงการตรวจสอบได้ หากต้องการให้การตรวจสอบ Input เป็นไปตามเงื่อนไข 100% จะตรวจสอบด้วยโค้ดฝั่งเซิฟเวอร์อีกครั้ง
+
+Attribute ที่เพิ่มมาใน HTML5
+ใน HTML5 ได้มีการเพิ่ม Attribute เพื่อใช้ใน <input> ได้แก่
+
+autocomplete
+autofocus
+form
+formaction
+formenctype
+formmethod
+formnovalidate
+formtarget
+height and width
+list
+min and max
+multiple
+pattern (regexp)
+placeholder
+required
+step
+และเพิ่ม Attribute เพื่อใช้ใน <form> ได้แก่
+autocomplete
+novalidate
+
+Attribute: autocomplete
+autocomplete ใช้ระบุว่าจะให้เปิดหรือปิดคำสั่ง autocomplete ในกล่องข้อความนั้น
+หาก autocomplete เปิดอยู่ เบราว์เซอร์จะส่งค่าที่เคยกรอกลงไปก่อนหน้านี้ให้อัตโนมัติ
+เราสามารถระบุให้ autocomplete เปิดหรือปิดทั้งฟอร์ม หรือเฉพาะบางกล่องข้อความก็ได้
+ใช้ได้กับ <form> และ <input>
+ตัวอย่าง
+<form action="action_page.php" autocomplete="on">
+  First name:<input type="text" name="fname"><br>
+  Last name: <input type="text" name="lname"><br>
+  E-mail: <input type="email" name="email" autocomplete="off"><br>
+  <input type="submit">
+</form>
+
+Attribute: novalidate
+novalidate ใช้กับ Element <form>
+เพื่อระบุว่าไม่ต้องตรวจสอบความถูกต้องของข้อมูลเมื่อกด Submit
+ใช้ไม่ได้กับ Internet Explorer เวอร์ชั่นต่ำกว่า 9 และ Safari
+ตัวอย่าง
+<form action="action_page.php" novalidate>
+  E-mail: <input type="email" name="user_email">
+  <input type="submit">
+</form>
+
+Attribute: autofocus
+autofocus ใช้เพื่อระบุให้เบราว์เซอร์ focus อัตโนมัติเมื่อหน้าเว็บโหลดเสร็จ
+ใช้ไม่ได้กับ Internet Explorer เวอร์ชั่นต่ำกว่า 9
+ตัวอย่าง
+First name:<input type="text" name="fname" autofocus>
+
+Attribute: form
+form ใช้เพื่อระบุว่า <input> เป็นของฟอร์มไหน (ระบุมากกว่า 1 ฟอร์มได้) กรณีไม่อยู่ภายใน Tag <form>
+การระบุมากกว่า 1 ฟอร์มให้ใช้เว้นวรรคเป็นตัวแบ่ง
+ใช้ไม่ได้กับ Internet Explorer
+ตัวอย่าง
+<form action="action_page.php" id="form1">
+  First name: <input type="text" name="fname"><br>
+  <input type="submit" value="Submit">
+</form>
+
+Last name: <input type="text" name="lname" form="form1">
+
+Attribute: formaction
+formaction ใช้เพื่อระบุชื่อไฟล์ที่จะส่งไปประมวลผลเมื่อกด Submit แล้ว
+formaction จะไปแทนที่กับ Attribute action ใน <form>
+ใช้กับ Input ประเภท submit และ image
+ใช้ไม่ได้กับ Internet Explorer เวอร์ชั่น 9 และต่ำกว่านั้น
+ตัวอย่าง
+<form action="a.php">
+  First name: <input type="text" name="fname"><br>
+  Last name: <input type="text" name="lname"><br>
+  <input type="submit" value="Submit"><br>
+  <input type="submit" formaction="b.asp"
+  value="Submit as admin">
+</form>
+
+Attribute: formenctype
+formenctype ใช้ระบุว่าจะ encode ข้อมูลอย่างไร เมื่อกด Submit (ใช้ได้กับ method="post" เท่านั้น)
+formenctype จะไปแทนที่กับ Attribute enctype ใน <form>
+ใช้กับ Input ประเภท submit และ image
+ใช้ไม่ได้กับ Internet Explorer เวอร์ชั่น 9 และต่ำกว่านั้น
+ตัวอย่าง
+<form action="" method="post">
+  First name: <input type="text" name="fname"><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formenctype="multipart/form-data" value="Submit as Multipart/form-data">
+</form>
+
+Attribute: formmethod
+formmethod ใช้ระบุใช้วิธีไหนในการส่ง HTTP เมื่อกด Submit
+formmethod จะไปแทนที่กับ Attribute method ใน <form>
+ใช้กับ Input ประเภท submit และ image
+ใช้ไม่ได้กับ Internet Explorer เวอร์ชั่น 9 และต่ำกว่านั้น
+ตัวอย่าง
+<form action="a.php" method="get">
+  First name: <input type="text" name="fname"><br>
+  Last name: <input type="text" name="lname"><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formmethod="post" formaction="b.php"
+  value="Submit using POST">
+</form>
+
+Attribute: formnovalidate
+formnovalidate ใช้กำหนดให้แบบฟอร์มไม่ต้องตรวจสอบความถูกต้องของข้อมูล
+formnovalidate จะไปแทนที่กับ Attribute novalidate ใน <form>
+ใช้กับ Input ประเภท submit
+ใช้ไม่ได้กับ Internet Explorer เวอร์ชั่น 9 หรือต่ำกว่านั้น และ Safari
+ตัวอย่าง
+<form>
+  E-mail: <input type="email" name="userid"><br>
+  <input type="submit" value="Submit"><br>
+  <input type="submit" formnovalidate value="Submit without validation">
+</form>
+
+Attribute: formtarget
+formtarget เอาไว้ระบุเจาะจงว่า Submit ฟอร์มที่หน้าต่างไหน
+formtarget จะไปแทนที่กับ Attribute target ใน <form>
+ใช้กับ Input ประเภท submit และ image
+ใช้ไม่ได้กับ Internet Explorer เวอร์ชั่น 9 หรือต่ำกว่านั้น
+ตัวอย่าง
+<form action="a.php">
+  First name: <input type="text" name="fname"><br>
+  Last name: <input type="text" name="lname"><br>
+  <input type="submit" value="Submit as normal">
+  <input type="submit" formtarget="_blank"
+  value="Submit to a new window">
+</form>
+
+Attribute: height และ width
+height และ width เอาไว้ระบุความสูงและความกว้างของ Element <input type="image">
+<input type="image"> คือการสร้างรูปภาพให้เป็นปุ่ม Submit
+ตัวอย่าง
+<input type="image" src="code_th.jpg" alt="Submit" width="50" height="50">
+
+Attribute: list
+list ใช้เพื่ออ้างอิงกับ id ของ <datalist> เพื่อระบุรายการสำหรับกรอกข้อมูลล่วงหน้า
+ใช้ไม่ได้กับ IE เวอร์ชั่น 9 หรือต่ำกว่านั้น และ Safari
+ตัวอย่าง
+<form action="action_page.php">
+  <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input type="submit">
+</form>
+
+Attribute: min และ max
+min และ max ใช้ระบุค่าน้อยสุดและค่ามากสุดที่กรอกได้ใน <input>
+min กับ max ใช้ได้กับ input ประเภท number range date datetime-local month time และ week
+ใช้ไม่ได้กับ IE เวอร์ชั่น 9 หรือต่ำกว่านั้น
+ตัวอย่าง
+<form>
+  จำกัดตัวเลขที่กรอกตั้งแต่ 1 ถึง 5:
+  <input type="number" name="quantity" min="1" max="5">
+</form>
+ตัวอย่าง
+<form>
+กรอกได้ไม่เกิน 1980-01-01:<br>
+<input type="date" name="bday" max="1979-12-31"><br><br>
+กรอกได้ตั้งแต่ 2000-01-01:<br>
+<input type="date" name="bday" min="2000-01-02"><br><br>
+</form>
+
+Attribute: multiple
+multiple ใช้ระบุให้สามารถเลือกไฟล์ได้มากกว่า 1 ไฟล์ใน <input>
+multiple ใช้ได้กับ input ประเภท file และ email
+ใช้ไม่ได้กับ IE เวอร์ชั่น 9 หรือต่ำกว่านั้น
+ตัวอย่าง
+Select images: <input type="file" name="img" multiple>
+
+Attribute: pattern
+pattern ใช้ระบุ regular expression ที่ <input> จะใช้ตรวจสอบ
+pattern ใช้ได้กับ input ประเภท text search url tel email และ password
+ควรใช้ Attribute title เพื่อช่วยอธิบายให้ผู้ใช้เข้าใจเงื่อนไข
+ใช้ไม่ได้กับ IE เวอร์ชั่น 9 หรือต่ำกว่านั้น และ Safari
+ตัวอย่าง
+Country code: <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+
+Attribute: placeholder
+placeholder ใช้เพื่ออธิบายกล่องข้อความว่าควรกรอกอะไรลงไป (ตัวอย่างข้อมูลหรือคำอธิบายสั้นๆ)
+คำอธิบายจะปรากฎเฉพาะตอนที่กล่องข้อความยังไม่ได้ใส่ค่าอะไรลงไป
+placeholder ใช้ได้กับ input ประเภท text search url tel email และ password
+ใช้ไม่ได้กับ IE เวอร์ชั่น 9 หรือต่ำกว่านั้น
+ตัวอย่าง
+<input type="text" name="fname" placeholder="First name">
+
+Attribute: required
+required ใช้ระบุให้เบราว์เซอร์บังคับกรอกข้อมูลก่อนกด Submit
+required ใช้ได้กับ input ประเภท text search url tel email password date number checkbox radio และ file
+ใช้ไม่ได้กับ IE เวอร์ชั่น 9 หรือต่ำกว่านั้น และ Safari
+ตัวอย่าง
+Username: <input type="text" name="usrname" required>
+
+Attribute: step
+step ใช้ระบุให้กรอกตัวเลขแบบก้าวกระโดด
+ยกตัวอย่างเช่น ถ้า step="3" ตัวเลขที่กรอกได้จะเป็น -3 0 3 6 เป็นต้น
+มักจะใช้ร่วมกับ Attribute min และ max
+step ใช้ได้กับ input ประเภท number range date datetime-local month time และ week
+ใช้ไม่ได้กับ IE เวอร์ชั่น 9 หรือต่ำกว่านั้น
+ตัวอย่าง
+<input type="number" name="points" step="3">
