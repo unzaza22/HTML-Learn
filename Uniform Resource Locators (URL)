@@ -1,0 +1,32 @@
+URL คืออีกชื่อเรียกหนึ่งของที่อยู่เว็บไซต์
+URL สามารถอยู่ในรูปแบบของคำ เช่น www.code-th.com หรืออยู่ในรูปของ IP Address (Internet Protocal Address) เช่น 119.81.218.155
+คนส่วนใหญ่ใช้คำในการจดจำ เพราะชื่อจำได้ง่ายกว่าตัวเลขมาก
+
+URL - Uniform Resource Locator
+การที่เบราว์เซอร์จะเรียกหน้าเว็บขึ้นมาจากเว็บเซิฟเวอร์ก็ใช้ URL
+URL ย่อมาจาก Uniform Resource Locator ใช้เพื่อระบุที่อยู่ของเอกสารหรือที่อยู่ของข้อมูลบนเว็บไซต์
+ที่อยู่เว็บไซต์ เช่น http://www.code-th.com/html/lesson/index ตามกฎ syntax ดังนี้
+
+scheme://prefix.domain:port/path/filename
+
+อธิบาย:
+scheme   คือประเภทของ Internet Service ซึ่งทั่วๆ ไปคึอ http หรือ https
+prefix   คือคำนำหน้าของ Domain ค่าเริ่มต้นคือ www
+domain   คือ Domain Name ของเว็บไซต์ เช่น code-th.com
+port     ระบุหมายเลข port หากไม่ระบุค่าเริ่มต้นทั่วไปคือ 80
+path     ระบุเส้นทางบนเซิฟเวอร์ ส่วนใหญ่คือโฟวเดอร์ในเว็บไซต์
+filename ชื่อไฟล์ของเอกสารที่ต้องการเปิด
+
+URL Schemes
+Scheme	ย่อมาจาก	                            ใช้กับ
+http	  HyperText Transfer Protocol	        เว็บเพจทั่วไป ที่ไม่เข้ารหัส
+https	  Secure HyperText Transfer Protocol	เว็บเพจที่ต้องการความปลอดภัย เข้ารหัส
+ftp	    File Transfer Protocol	            ใช้สำหรับ Download หรือ Upload ไฟล์
+file		                                    เปิดไฟล์บนคอมพิวเตอร์ของคุณเอง
+
+URL Encoding
+URL ถูกส่งผ่านอินเตอร์เน็ตได้โดยใช้ Character Set ของ ASCII ถ้า URL มีตัวอักษรนอกเหนือจากชุด ASCII ตัว URL ก็จะเปลี่ยนรูปมันอัตโนมัติ
+URL Encoding จะเปลี่ยนตัวอักษรที่เป็น non-ASCII ให้อยู่ในรูปแบบที่สามารถส่งผ่านอินเตอร์เน็ตได้
+URL Encoding จะแทนที่ตัวอักษร non-ASCII ด้วยเครื่องหมาย "%" นำหน้าแล้วตามตัวเลขฐานสิบหก
+URL ไม่สามารถมีเว้นวรรค URL Encoding ก็จะแทนที่เว้นวรรคด้วยเครื่องหมายบวก (+) หรือ %20
+
