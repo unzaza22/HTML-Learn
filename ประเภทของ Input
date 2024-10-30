@@ -1,0 +1,234 @@
+ประเภทข้อความ
+<input type="text"> ใช้สร้างกล่องใส่ข้อความบรรทัดเดียว
+ตัวอย่าง
+<form>
+  First name:<br>
+  <input type="text" name="firstname"><br>
+  Last name:<br>
+  <input type="text" name="lastname">
+</form>
+
+ประเภทรหัสผ่าน
+<input type="password"> ใช้สร้างกล่องใส่รหัสผ่าน
+สิ่งที่พิมพ์ลงไปจะถูกซ่อนไว้ในรูปแบบวงกลมสีดำ
+ตัวอย่าง
+<form action="">
+User name:<br>
+<input type="text" name="userid">
+<br>
+User password:<br>
+<input type="password" name="psw">
+</form>
+
+ประเภทปุ่ม Submit
+<input type="submit"> ใช้สร้างปุ่ม Submit ให้กับฟอร์ม เพื่อส่งข้อมูลไปยัง form-handler
+form-handler คือหน้าเว็บของเซิฟเวอร์ที่มีสคริปในการรับข้อมูลไปประมวลผล
+ซึ่ง URL ของไฟล์นั้นจะถูกระบุอยู่ใน Attribute action ของฟอร์ม
+ตัวอย่าง
+<form action="action_page.php">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+ถ้าไม่ระบุค่าใน Attribute value ปุ่มจะใช้ค่าเริ่มต้น "Submit" ให้อัตโนมัติ
+ตัวอย่าง
+<form action="action_page.php">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey"><br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse"><br><br>
+  <input type="submit">
+</form>
+
+ประเภทปุ่มรีเซ็ต
+<input type="reset"> ใช้สร้างปุ่มรีเซ็ตให้กับฟอร์ม เพื่อรีเซ็ตค่าทุกช่องในฟอร์มกลับไปสู่ค่าเริ่มต้น
+ตัวอย่าง
+<form action="action_page.php">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey"><br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse"><br><br>
+  <input type="submit" value="Submit">
+  <input type="reset">
+</form>
+
+ประเภทตัวเลือกแบบ Radio
+<input type="radio"> ใช้สร้างตัวเลือกค่าใดค่าหนึ่ง (Radio Button)
+ตัวอย่าง
+<form>
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other  
+</form> 
+
+ประเภทตัวเลือกแบบ Checkbox
+<input type="checkbox"> ใช้สร้างตัวเลือกได้มากกว่า 1 ค่า หรือไม่เลือกเลย (Checkbox)
+ตัวอย่าง
+<form action="action_page.php">
+<input type="checkbox" name="vehicle1" value="Bike">I have a bike<br>
+<input type="checkbox" name="vehicle2" value="Car">I have a car 
+</form> 
+
+ปะเภทปุ่มทั่วไป
+<input type="button"> ใช้สร้างปุ่ม
+ตัวอย่าง
+<input type="button" onclick="alert('Hello World!')" value="Click Me!">
+
+ประเภทที่เพิ่มมาใน HTML5
+ใน HTML5 ได้เพิ่มประเภท Input ได้แก่
+color
+date
+datetime
+datetime-local
+email
+month
+number
+range
+search
+tel
+time
+url
+week
+เบราว์เซอร์รุ่นเก่าอาจจะไม่ support ก็จะแสดงผลแบบ <input type="text"> แทน
+
+ประเภทตัวเลข
+<input type="number"> ใช้สร้างช่องกรอกตัวเลข
+และยังสามารถใส่เงื่อนไขได้ว่าจะสามารถกรอกตัวเลขได้ตั้งแต่เลขเท่าไหร่ถึงเลขเท่าไหร่
+ตัวอย่าง
+<form>
+  จำกัดตัวเลขที่กรอกตั้งแต่ 1 ถึง 5:
+  <input type="number" name="quantity" min="1" max="5">
+</form>
+
+การใส่เงื่อนไข Input
+การใส่เงื่อนไขต่างๆ ใน Input ใส่ได้โดยการใช้ Attribute เป็นการระบุเงื่อนไข ได้แก่
+Attribute	อธิบาย
+disabled	ช่องกรอกถูกยกเลิกไม่ให้ใช้
+max	      ระบุค่าสูงสุดที่สามารถกรอกได้
+maxlength	ระบุความยาวตัวอักษรสูงสุดที่สามารถกรอกได้
+min	      ระบุค่าต่ำสุดที่สามารถกรอกได้
+pattern	  ระบุ regular expression เพื่อตรวจสอบความถูกต้อง
+readonly	ให้ช่องกรอกข้อมูลนี้อ่านได้อย่างเดียว แก้ไขไม่ได้
+required	ระบุว่าช่องกรอกข้อมูลนี้บังคับกรอก ห้ามเว้นว่าง
+size	    ระบุความกว้างของช่องกรอกข้อมูล
+step	    ระบุให้กรอกตัวเลขแบบก้าวกระโดด
+value	    ระบุค่าเริ่มต้นของช่องกรอกข้อมูล
+เราจะได้เรียนรู้รายละเอียดเกี่ยวกับเงื่อนไขต่างๆ ในบทถัดไป
+จากตัวอย่างด้านล่าง เป็นตัวอย่างช่องกรอกตัวเลขที่ระบุเงื่อนไขสามารถกรอกเลขได้ตั้งแต่ 0 - 100 และเลขกระโดดทีละ 10 โดยมีค่าเริ่มต้นที่ 30
+ตัวอย่าง
+<input type="number" name="quantity" min="0" max="100" step="10" value="30">
+
+ประเภทวันที่
+<input type="date"> ใช้สร้างช่องกรอกวันที่
+ใช้กับเบราว์เซอร์ Firefox ไม่ได้ และใช้กับ IE ที่ version ต่ำกว่า 11 ไม่ได้
+ตัวอย่าง
+<form>
+  วันเกิด:
+  <input type="date" name="bday">
+</form>
+คุณสามารถใส่เงื่อนไขกับวันที่ได้เช่นเดียวกัน
+ตัวอย่าง
+<form>
+กรอกได้ไม่เกิน 1980-01-01:<br>
+<input type="date" name="bday" max="1979-12-31"><br><br>
+กรอกได้ตั้งแต่ 2000-01-01:<br>
+<input type="date" name="bday" min="2000-01-02"><br><br>
+</form>
+
+ประเภทสี
+<input type="color"> ใช้สร้างช่องกรอกสี
+ใช้ไม่ได้กับ Internet Explorer เวอร์ชั่นต่ำกว่า 11 และ Safari เวอร์ชั่นต่ำกว่า 9.1
+ตัวอย่าง
+<form>
+  เลือกสีที่คุณชอบ:
+  <input type="color" name="favcolor" value="#ff0000">
+</form>
+
+ประเภทระยะ
+<input type="range"> ใช้สร้างช่องกรอกตัวเลขในระยะที่กำหนด
+ใช้ไม่ได้กับ Internet Explorer เวอร์ชั่นต่ำกว่า 9
+ตัวอย่าง
+<form>
+  คะแนน:
+  <input type="range" name="points" min="0" max="10">
+  <input type="submit">
+</form>
+
+ประเภทเดือน
+<input type="month"> ใช้สร้างช่องกรอกเดือนและปี
+ใช้ไม่ได้กับ Firefox และ Internet Explorer เวอร์ชั่นต่ำกว่า 11
+ตัวอย่าง
+<form>
+  วันเกิด (เดือน และ ปี):
+  <input type="month" name="bdaymonth">
+</form>
+
+ประเภทสัปดาห์
+<input type="week"> ใช้สร้างช่องกรอกสัปดาห์และปี
+ใช้ไม่ได้กับ Firefox และ Internet Explorer เวอร์ชั่นต่ำกว่า 11
+ตัวอย่าง
+<form>
+  เลือกสัปดาห์:
+  <input type="week" name="year_week">
+</form>
+
+ประเภทเวลา
+<input type="time"> ใช้สร้างช่องกรอกเวลา (ไม่มี time zone)
+ใช้ไม่ได้กับ Firefox และ Internet Explorer เวอร์ชั่นต่ำกว่า 12
+ตัวอย่าง
+<form>
+  เลือกเวลา
+  <input type="time" name="usr_time">
+  <input type="submit">
+</form>
+
+ประเภทวันที่และเวลา
+<input type="datetime-local"> ใช้สร้างช่องกรอกวันที่และเวลา (ไม่มี time zone)
+ใช้ไม่ได้กับ Firefox และ Internet Explorer เวอร์ชั่นต่ำกว่า 12
+ตัวอย่าง
+<form>
+  วันเกิด (วันที่และเวลา):
+  <input type="datetime-local" name="bdaytime">
+</form>
+
+ประเภทอีเมล
+<input type="email"> ใช้สร้างช่องกรอกอีเมลโดยเฉพาะ
+เวลากด submit ฟอร์มเบราว์เซอร์จะตรวจสอบความถูกต้องให้อัตโนมัติว่ากรอกอีเมลมาถูกต้องหรือไม่ เช่น มี "@" หรือมี "." รึเปล่า
+ใช้ไม่ได้กับ Internet Explorer เวอร์ชั่นต่ำกว่า 9
+ตัวอย่าง
+<form action="">
+  E-mail:
+  <input type="email" name="email">
+</form>
+
+ประเภทค้นหา
+<input type="search"> ใช้สร้างช่องค้นหาโดยเฉพาะ (หน้าตาจะเหมือนช่องกรอกข้อความธรรมดา)
+ตัวอย่าง
+<form>
+  Search Google:
+  <input type="search" name="googlesearch">
+</form>
+
+ประเภทเบอร์โทรศัพท์
+<input type="tel"> ใช้สร้างช่องกรอกเบอร์โทรศัพท์
+ใช้ได้กับ Safari เวอร์ชั่น 8 ขึ้นไป
+ตัวอย่าง
+<form>
+  Telephone:
+  <input type="tel" name="usrtel">
+</form>
+
+ประเภท URL
+<input type="url"> ใช้สร้างช่องกรอก URL
+เวลากด submit ฟอร์มเบราว์เซอร์จะตรวจสอบความถูกต้องให้อัตโนมัติว่ากรอก URL มาถูกต้องหรือไม่ เช่น มี ".com" รึเปล่า
+ใช้ไม่ได้กับ Internet Explorer เวอร์ชั่นต่ำกว่า 9
+ตัวอย่าง
+<form>
+  Add your homepage:
+  <input type="url" name="homepage">
+</form>
+
